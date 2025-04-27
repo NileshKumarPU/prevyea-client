@@ -41,11 +41,11 @@ function SemOne() {
 
   return (
     <>
-      <div className="flex justify-center pt-10 pb-10 bg-amber-50">
+      <div className="flex justify-center bg-amber-50 sempage-mobile">
         <div className="year">
           <p className="text-center font-bold">Select Year</p>
-          <div className="flex justify-center ">
-            <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-10 border-2">
+          <div className="flex justify-center inside-year">
+            <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-10 border-2 year-list">
               <button
                 className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
@@ -103,7 +103,7 @@ function SemOne() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col justify-center gap-12 pt-10">
           <div className="paperCode">
             <p className="text-center font-bold">Select Paper Code</p>
             <div className=" flex justify-center ">

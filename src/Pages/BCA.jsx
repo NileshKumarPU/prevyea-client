@@ -12,23 +12,23 @@ function BCA(){
         </div>
         <div className="semCards ">
 
-        <Link to={'SemOne'} className="card">
+        <Link to={'SemOne'} className="card" >
           <RectangleCard name="Sem-I" />
         </Link>
         
-        <Link to={'SemTwo'} className="card">
+        <Link to={'SemTwo'} >
           <RectangleCard name="Sem-II" />
         </Link>
-        <Link to={'SemThree'} className="card">
+        <Link to={'SemThree'} >
           <RectangleCard name="Sem-III" />
         </Link>
-        <Link to={'SemFour'} className="card">
+        <Link to={'SemFour'} >
           <RectangleCard name="Sem-IV" />
         </Link>
-        <Link to={'SemFive'} className="card">
+        <Link to={'SemFive'} >
           <RectangleCard name="Sem-V" />
         </Link>
-        <Link to={'SemSix'} className="card">
+        <Link to={'SemSix'} >
           <RectangleCard name="Sem-VI" />
         </Link>
         </div>

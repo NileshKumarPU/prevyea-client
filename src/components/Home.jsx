@@ -4,7 +4,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import RectangleCard from "./RectangleCard";
 
-import "./Home.css";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router";
 

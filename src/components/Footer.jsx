@@ -6,7 +6,7 @@ function Footer() {
     <>
       <div className="bgblue w-full h-56 flex justify-between px-10 font-mons py-5 footer ">
         <div>
-          <p className="font-medium pb-2 ">Copyright© PrevYea 2025-2026</p>
+          <p className="font-medium pb-2 ">Copyright© PrevYea 2025</p>
           <a href="#" target="_blank" className="font-medium"> Visitors:
               <img src="https://hitwebcounter.com/counter/counter.php?page=20505028&style=0024&nbdigits=5&type=page&initCount=0"      title="Counter Widget" Alt="Visit counter For Websites"   border="0" className="inline pl-2" /></a>    
         </div>
