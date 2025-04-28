@@ -6,6 +6,8 @@ function BCA(){
     return(
 
         <>
+        <div className="bg-amber-50">
+
        
         <div className="pt-10">
             <SearchBar/>
@@ -31,6 +33,7 @@ function BCA(){
         <Link to={'SemSix'} >
           <RectangleCard name="Sem-VI" />
         </Link>
+        </div>
         </div>
         </>
     )

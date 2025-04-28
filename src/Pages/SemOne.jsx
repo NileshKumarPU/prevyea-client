@@ -5,6 +5,7 @@ import axios from 'axios'
 
 
 function SemOne() {
+
   const [year, setYear] = useState(2020);
   const [paperCode, SetPaperCode] = useState("cc1");
   
@@ -41,13 +42,13 @@ function SemOne() {
 
   return (
     <>
-      <div className="flex justify-center bg-amber-50 sempage-mobile">
+      <div className="flex justify-center bg-amber-50 sempage-mobile mb-6">
         <div className="year">
           <p className="text-center font-bold">Select Year</p>
           <div className="flex justify-center inside-year">
-            <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-10 border-2 year-list">
+            <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-5 border-2 year-list">
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2020);
@@ -56,7 +57,7 @@ function SemOne() {
                 2020
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2021);
@@ -65,7 +66,7 @@ function SemOne() {
                 2021
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2022);
@@ -74,7 +75,7 @@ function SemOne() {
                 2022
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2023);
@@ -83,7 +84,7 @@ function SemOne() {
                 2023
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2024);
@@ -92,7 +93,7 @@ function SemOne() {
                 2024
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2025);
@@ -152,7 +153,8 @@ function SemOne() {
           </div>
 
 
-                <SearchBar text="Get Answered by AI"/>
+                <SearchBar text="Get Answered by AI" />
+                
 
           
         </div>

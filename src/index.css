@@ -38,7 +38,7 @@ h1 {
 
 button {
     
-    border: 1px solid black;
+   
   
     font-size: 1em;
     font-weight: 500;
@@ -241,11 +241,55 @@ margin: auto;
 
  /* Responsive Design */
  @media (max-width: 768px) {
-.footer{
-  display: flex;
-  flex-direction: row;
 
-   height: fit-content;
+  .homepage{
+    display: grid;
+    gap: 2rem;
+    
+  }
+
+  /* .homecard{
+    height: fit-content;
+  } */
+  .head{
+    display: block;
+    justify-items: right;
+    font-size: larger;
+  }
+  .menu{
+    display: block;
+   padding: 0.5rem;
+   align-self: center;
+    border: 1px solid black;
+  }
+  
+  #nav-links{
+    display: none;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    width: 95vw;
+   
+    
+ 
+ 
+  
+  
+ 
+}
+#nav-links .px-4{
+  border: 1px solid black;
+  width: 95vw;
+  padding: 1rem;
+  padding-right: 1.25rem;
+ 
+  text-align: right;
+  
+}
+
+.footer{
+  display: grid;
+  gap: 1.5rem;
+  height: fit-content;
 }
 
 .sempage-mobile{
@@ -269,6 +313,8 @@ margin: auto;
 
 .rectangle{
  width: 100%;
+ height: fit-content;
+font-size:larger;
   
 }
 .semCards{
@@ -286,10 +332,14 @@ width: 100;
  display: grid;
  grid-template-columns: 1fr 1fr 1fr 1fr;
  width: 90vw;
- 
-  
-  
 }
+
+
+.viewer{
+  width: 90vw;
+  height: 75vh;
+}
+
  }
 
 @media (prefers-color-scheme: light) {

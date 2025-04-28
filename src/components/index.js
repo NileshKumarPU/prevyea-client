@@ -6,6 +6,7 @@ import RectangleCard from "./RectangleCard";
 import PaperCodeButton from "./paperCodeButton";
 import YearButton from "./YearButton";
 import SearchBar from "./SearchBar";
+import Typewriter from "./Typewriter";
 
 
-export {Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar}
+export {Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,Typewriter}
