@@ -61,7 +61,7 @@ function Header() {
             <Link to="#" className="px-4">
               Contact us
             </Link>
-            <Link to={path} className="px-4 border-b" onClick={logOut}>
+            <Link to={path} className="px-4" onClick={logOut}>
               {text} <LogIn className="inline" />
             </Link>
           </div>

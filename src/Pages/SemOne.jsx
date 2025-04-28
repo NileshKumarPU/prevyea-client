@@ -42,11 +42,11 @@ function SemOne() {
 
   return (
     <>
-      <div className="flex justify-center bg-amber-50 sempage-mobile mb-6">
-        <div className="year">
+      <div className="flex justify-center sempage-mobile pb-6  w-4/5 m-auto">
+        <div className="w-full h-fit pt-36 mt-6 year-box-mobile">
           <p className="text-center font-bold">Select Year</p>
-          <div className="flex justify-center inside-year">
-            <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-5 border-2 year-list">
+          <div className="flex justify-center ">
+            <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-5 border-2 year-list-mobile">
               <button
                 className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
@@ -147,7 +147,7 @@ function SemOne() {
             <iframe
               src={pdfUrl}
               
-              height="100%"
+              height="96%"
               width="100%"
             ></iframe>
           </div>

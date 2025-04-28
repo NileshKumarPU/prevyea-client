@@ -10,7 +10,7 @@ function BCA(){
 
        
         <div className="pt-10">
-            <SearchBar/>
+            <SearchBar text="Search Paper Code"/>
         </div>
         <div className="semCards ">
 

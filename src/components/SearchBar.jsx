@@ -45,7 +45,7 @@ export default function SearchBar(props) {
         placeholder={props.text}
         className="bg-transparent outline-none flex-grow text-gray-800 placeholder-gray-600"
       />
-      <button className='bggreen ' onClick={handleSearch}>
+      <button id='search-icon' className='bggreen ' onClick={handleSearch}>
         <Search />
       </button>
         </div>

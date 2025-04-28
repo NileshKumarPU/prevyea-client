@@ -3,13 +3,19 @@ import { PaperCodeButton, SearchBar, YearButton } from "../components";
 import { useEffect, useState } from "react";
 import axios from 'axios'
 
+
 function SemTwo() {
+
   const [year, setYear] = useState(2020);
   const [paperCode, SetPaperCode] = useState("cc3");
   
-  const [pdfUrl, setPdfUrl] = useState('');
+  const [pdfUrl, setPdfUrl] = useState('https://drive.google.com/file/d/1Lw5jJI6NQ9zpaGRE3Z578ZL3r3xGClLC/preview');
   
   useEffect(()=>{
+   
+   
+   
+
 
    fetchurl({paperCode,year});
 
@@ -36,13 +42,13 @@ function SemTwo() {
 
   return (
     <>
-      <div className="flex justify-center pt-10 pb-10 bg-amber-50">
-        <div className="year">
+      <div className="flex justify-center  sempage-mobile pb-6 w-4/5 m-auto">
+        <div className="w-full h-fit pt-36 mt-6 year-box-mobile">
           <p className="text-center font-bold">Select Year</p>
           <div className="flex justify-center ">
-            <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-10 border-2">
+            <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-5 border-2 year-list-mobile">
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2020);
@@ -51,7 +57,7 @@ function SemTwo() {
                 2020
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2021);
@@ -60,7 +66,7 @@ function SemTwo() {
                 2021
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2022);
@@ -69,7 +75,7 @@ function SemTwo() {
                 2022
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2023);
@@ -78,7 +84,7 @@ function SemTwo() {
                 2023
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2024);
@@ -87,7 +93,7 @@ function SemTwo() {
                 2024
               </button>
               <button
-                className="px-5 py-2 text-white font-medium outline-none rounded-xl shadow-lg"
+                className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
                 style={{ backgroundColor: "#2CB8C6" }}
                 onClick={() => {
                   setYear(2025);
@@ -98,7 +104,7 @@ function SemTwo() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col justify-center gap-12 pt-10">
           <div className="paperCode">
             <p className="text-center font-bold">Select Paper Code</p>
             <div className=" flex justify-center ">
@@ -109,28 +115,28 @@ function SemTwo() {
                   style={{ backgroundColor: "#D8F29D" }}
                   onClick={()=>{SetPaperCode('cc3')}}
                 >
-                 CC-3
+                 CC-1
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
                   style={{ backgroundColor: "#D8F29D" }}
                   onClick={()=>{SetPaperCode('cc4')}}
                 >
-                 CC-4
+                 CC-2
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
                   style={{ backgroundColor: "#D8F29D" }}
                   onClick={()=>{SetPaperCode('aecc2')}}
                 >
-                 AECC-2
+                 AECC-1
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
                   style={{ backgroundColor: "#D8F29D" } }
                   onClick={()=>{SetPaperCode('ge2')}}
                 >
-                 GE-2
+                 GE-1
                 </button>
                 
               </div>
@@ -141,13 +147,14 @@ function SemTwo() {
             <iframe
               src={pdfUrl}
               
-              height="100%"
+              height="96%"
               width="100%"
             ></iframe>
           </div>
 
 
-                <SearchBar text="Get Answered by AI"/>
+                <SearchBar text="Get Answered by AI" />
+                
 
           
         </div>
