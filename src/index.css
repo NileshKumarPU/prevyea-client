@@ -255,7 +255,9 @@ margin: auto;
     display: block;
     justify-items: right;
     font-size: larger;
+    
   }
+  
   .menu{
     display: block;
    padding: 0.5rem;
@@ -264,20 +266,30 @@ margin: auto;
   }
   
   #nav-links{
-    display: none;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    width: 95vw;
-   
+    display: grid;
     
- 
- 
+    padding-bottom:0;
+    max-height: 0;
+    width: 95vw;
+    
+    transition: padding-bottom 0.75s ease-out;
+    transition: max-height 0.75s ease-out;
+    overflow: hidden;
+    
+   
+   
+  }
+  #nav-links.show{
+    max-height: 30vh;   
+    transition: max-height 0.75s ease-out;
+    display: grid;
+    }
+
   
-  
  
-}
+
 #nav-links .px-4{
-  border: 1px solid black;
+  border-top: 1px solid black;
   width: 95vw;
   padding: 1rem;
   padding-right: 1.25rem;

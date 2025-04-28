@@ -10,11 +10,12 @@ function Header() {
     if(screen.width<786){
 
       const ele = document.getElementById("nav-links");
-      if (ele.style.display === "none") {
-        ele.style.display = "grid";
-      } else {
-        ele.style.display = "none";
-      }
+      ele.classList.toggle("show")
+      // if (ele.style.display === "none") {
+      //   ele.style.display = "grid";
+      // } else {
+      //   ele.style.display = "none";
+      // }
     }
   }
 
@@ -39,7 +40,7 @@ function Header() {
     <>
       <div className="bgblue text-md font-bold">
         <div className="p-2 px-4 head gap-20">
-          <div className=" w-full flex justify-between ">
+          <div className=" w-full flex justify-between pb-2 ">
             <div>
               <Link to="">
                 <img className="rounded-3xl" src={logo} width={150} />
@@ -60,7 +61,7 @@ function Header() {
             <Link to="#" className="px-4">
               Contact us
             </Link>
-            <Link to={path} className="px-4" onClick={logOut}>
+            <Link to={path} className="px-4 border-b" onClick={logOut}>
               {text} <LogIn className="inline" />
             </Link>
           </div>
