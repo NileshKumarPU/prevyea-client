@@ -103,7 +103,7 @@ function SemTwo() {
                     SetPaperCode("cc8");
                   }}
                 >
-                  CC-1
+                  CC-8
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
@@ -112,7 +112,7 @@ function SemTwo() {
                     SetPaperCode("cc9");
                   }}
                 >
-                  CC-2
+                  CC-9
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
@@ -121,7 +121,7 @@ function SemTwo() {
                     SetPaperCode("cc10");
                   }}
                 >
-                  CC-2
+                  CC-10
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
@@ -130,7 +130,7 @@ function SemTwo() {
                     SetPaperCode("sec2");
                   }}
                 >
-                  AECC-1
+                  SEC-2
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
@@ -139,7 +139,7 @@ function SemTwo() {
                     SetPaperCode("ge4");
                   }}
                 >
-                  GE-1
+                  GE-4
                 </button>
               </div>
             </div>
