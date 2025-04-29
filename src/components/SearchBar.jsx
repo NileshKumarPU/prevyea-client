@@ -69,7 +69,7 @@ export default function SearchBar(props) {
     <>
       <div
         id="container"
-        className="bg-lime-200 m-auto mt-4 mb-0 rounded-xl px-4 pt-2 pb-2 flex flex-col items-center max-w-full min-w-mds shadow-sm"
+        className="bg-lime-200 m-auto mt-4 mb-0 rounded-xl px-4 pt-2 pb-2 flex flex-col items-center max-w-full min-w-mds shadow-sm "
       >
         <div className="mobile w-md m-auto rounded-xl  px-2 pb-2 pt-2 flex  ">
           <input
