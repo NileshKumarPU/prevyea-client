@@ -1,4 +1,4 @@
-import { PaperCodeButton, SearchBar, YearButton } from "../components";
+import { AiSearchBar, PaperCodeButton, SearchBar, YearButton } from "../components";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -151,7 +151,7 @@ function SemTwo() {
             <iframe src={pdfUrl} height="96%" width="100%"></iframe>
           </div>
 
-          <SearchBar text="Get Answered by AI" />
+          <AiSearchBar text="Get Answered by AI" />
         </div>
       </div>
     </>

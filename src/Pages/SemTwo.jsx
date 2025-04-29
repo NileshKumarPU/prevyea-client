@@ -1,5 +1,5 @@
 
-import { PaperCodeButton, SearchBar, YearButton } from "../components";
+import { PaperCodeButton, AiSearchBar, YearButton } from "../components";
 import { useEffect, useState } from "react";
 import axios from 'axios'
 
@@ -153,7 +153,7 @@ function SemTwo() {
           </div>
 
 
-                <SearchBar text="Get Answered by AI" />
+                <AiSearchBar text="Get Answered by AI" />
                 
 
           

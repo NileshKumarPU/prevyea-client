@@ -5,7 +5,7 @@ import { Container, Copy, Search } from "lucide-react";
 import { useEffect } from "react";
 import CopyButton from "./CopyButton";
 
-export default function SearchBar(props) {
+export default function AiSearchBar(props) {
   const [query, setQuery] = useState("");
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
@@ -69,9 +69,9 @@ export default function SearchBar(props) {
     <>
       <div
         id="container"
-        className="bg-lime-200 m-auto mt-4 mb-0 rounded-full px-4 pt-2 pb-2 flex flex-col items-center max-w-md min-w-md shadow-sm "
+        className="bg-lime-200 m-auto mt-4 mb-0 rounded-xl px-4 pt-2 pb-2 flex flex-col items-center max-w-full min-w-mds shadow-sm"
       >
-        <div className="mobile w-full m-auto rounded-xl  px-2 pb-2 pt-2 flex  ">
+        <div className="mobile w-md m-auto rounded-xl  px-2 pb-2 pt-2 flex  ">
           <input
             type="text"
             value={query}
