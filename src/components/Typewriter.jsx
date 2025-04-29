@@ -1,21 +1,32 @@
 import React, { useState, useEffect } from 'react';
 
-function Typewriter({ text, speed = 50 }) {
+const Typewriter = ({ text, speed = 50 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+
+    
+    if (!text){setDisplayedText(''); return};
+
     if (index < text.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText(prevText => prevText + text[index]);
-        setIndex(prevIndex => prevIndex + 1);
+       
+        setDisplayedText((prev) => prev + text[index]);
+        setIndex((prev) => prev + 1);
       }, speed);
 
       return () => clearTimeout(timeout);
     }
+  
   }, [index, text, speed]);
 
-  return <span>{displayedText}</span>;
-}
+  return (
+    <div className="whitespace-pre-wrap font-mono text-lg">
+      {displayedText}
+      <span className="animate-pulse">|</span>
+    </div>
+  );
+};
 
 export default Typewriter;
