@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function SemTwo() {
-  const [year, setYear] = useState(2020);
-  const [paperCode, SetPaperCode] = useState("cc3");
+  const [year, setYear] = useState(2021);
+  const [paperCode, SetPaperCode] = useState("cc8");
 
   const [pdfUrl, setPdfUrl] = useState(
-    "https://drive.google.com/file/d/1Lw5jJI6NQ9zpaGRE3Z578ZL3r3xGClLC/preview"
+    "https://drive.google.com/file/d/1ry23WTabLDRJQmFcwqMZB3aWs6mShsmr/preview"
   );
 
   useEffect(() => {
