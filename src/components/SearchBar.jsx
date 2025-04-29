@@ -12,15 +12,7 @@ export default function SearchBar(props) {
   const[copySuccess,setCopySuccess]= useState();
  
 
-  useEffect(() => {
-    const box = document.getElementById("box-opener");
-    const container = document.getElementById("container");
-    if (question) {
-      // container.classList.remove("max-w-md")
-      box.classList.remove("max-h-0");
-    } else box.classList.add("max-h-0");
-    // container.classList.add("max-w-md")
-  }, [question, query]);
+  
 
   // const handleCopy= async()=>{
   //   try {
@@ -37,28 +29,13 @@ export default function SearchBar(props) {
   // }
   const handleSearch = () => {
     setAnswer("Generating answer...");
-    setQuestion(query);
 
-    if (query.trim() !== "") {
-      console.log("Searching for:", query);
-      axios({
-        method: "post",
-        url: "http://localhost:8001/aisearch",
-        data: {
-          searchquery:
-            query +
-            ",answer it like a pragraph in single font size in 50 words",
-        },
-      }).then((result) => {
-        if (result.status == 200) {
-          setAnswer(result.data.contents);
-          console.log(answer);
-          setQuery("");
-        }
-      });
 
+    
+       
       
-    }
+      
+    
   };
 
   const handleKeyDown = (e) => {
@@ -69,7 +46,7 @@ export default function SearchBar(props) {
     <>
       <div
         id="container"
-        className="bg-lime-200 m-auto mt-4 mb-0 rounded-full px-4 pt-2 pb-2 flex flex-col items-center max-w-md min-w-md shadow-sm "
+        className="bg-lime-200 m-auto mt-4 mb-0 rounded-full px-4 pt-2 pb-2 flex flex-col items-center max-w-md  shadow-sm "
       >
         <div className="mobile w-full m-auto rounded-xl  px-2 pb-2 pt-2 flex  ">
           <input
@@ -85,18 +62,7 @@ export default function SearchBar(props) {
           </button>
         </div>
 
-        <div
-          id="box-opener"
-          className="text-left justify-items-start min-w-full max-h-0 overflow-hidden "
-        >
-          <p className=" mt-0  w-full  px-4 py-2 border-b-2 ">
-            <span className="text-red-400"> Que.: </span>&nbsp; {question}{" "}
-          </p>
-          <p className=" mt-0 rounded-full w-full px-4 py-2 ">
-            <span className="text-green-500">Ans.: </span> &nbsp; {answer}
-          </p>
-            <CopyButton textToCopy={answer} />
-        </div>
+        
       </div>
     </>
   );

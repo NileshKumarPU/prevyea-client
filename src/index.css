@@ -372,8 +372,11 @@ width: 100;
 } */
 
 #container{
+  min-width: 85vw;
   .mobile{
-    max-width:90vw;
+    max-width:full;
+    
+   
   }
 }
 #copy-btn{

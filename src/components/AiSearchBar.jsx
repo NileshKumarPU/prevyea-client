@@ -43,7 +43,7 @@ export default function AiSearchBar(props) {
       console.log("Searching for:", query);
       axios({
         method: "post",
-        url: "http://localhost:8001/aisearch",
+        url: "https://prevyea-server.vercel.app/aisearch",
         data: {
           searchquery:
             query +
@@ -69,9 +69,9 @@ export default function AiSearchBar(props) {
     <>
       <div
         id="container"
-        className="bg-lime-200 m-auto mt-4 mb-0 rounded-xl px-4 pt-2 pb-2 flex flex-col items-center max-w-full min-w-mds shadow-sm"
+        className="bg-lime-200 m-auto mt-4 mb-0 rounded-xl px-4 pt-2 pb-2 flex flex-col items-center max-w-md min-w-md shadow-sm border-2"
       >
-        <div className="mobile w-md m-auto rounded-xl  px-2 pb-2 pt-2 flex  ">
+        <div className="mobile w-full m-auto rounded-xl  px-2 pb-2 pt-2 flex border-2  ">
           <input
             type="text"
             value={query}
