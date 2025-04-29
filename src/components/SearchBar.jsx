@@ -28,7 +28,7 @@ export default function SearchBar(props) {
   // }
   // }
   const handleSearch = () => {
-    setAnswer("Generating answer...");
+    setAnswer("This Service will be live Soon..");
 
 
     
@@ -60,6 +60,11 @@ export default function SearchBar(props) {
           <button id="search-icon" className="bggreen" onClick={handleSearch}>
             <Search />
           </button>
+        </div>
+        <div>
+          <p>
+            <Typewriter text={answer}/>
+          </p>
         </div>
 
         

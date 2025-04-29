@@ -24,7 +24,7 @@ const Typewriter = ({ text, speed = 50 }) => {
   return (
     <div className="whitespace-pre-wrap font-mono text-lg">
       {displayedText}
-      <span className="animate-pulse">|</span>
+      {/* <span className="animate-pulse">|</span> */}
     </div>
   );
 };

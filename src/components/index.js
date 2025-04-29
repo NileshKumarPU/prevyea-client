@@ -8,7 +8,8 @@ import YearButton from "./YearButton";
 import SearchBar from "./SearchBar";
 import AiSearchBar from "./AiSearchBar";
 import CopyButton from "./CopyButton";
+import Typewriter from "./Typewriter";
 
 
 
-export {Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton}
+export {Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton,Typewriter}
