@@ -46,8 +46,7 @@ export default function AiSearchBar(props) {
         url: "https://prevyea-server.vercel.app/aisearch",
         data: {
           searchquery:
-            query +
-            ",answer it like a pragraph in single font size in 50 words",
+            query ,
         },
       }).then((result) => {
         if (result.status == 200) {
