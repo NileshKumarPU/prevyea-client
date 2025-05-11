@@ -1,6 +1,7 @@
-import { AiSearchBar, PaperCodeButton, SearchBar, YearButton } from "../components";
+import { AiSearchBar, PaperCodeButton, SearchBar, YearButton, } from "../components";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import MovingText from "../components/MovingText";
 
 function SemTwo() {
   const [year, setYear] = useState(2021);
@@ -29,7 +30,9 @@ function SemTwo() {
 
   return (
     <>
+      <MovingText text="All PYQs From 2021-2024 Are Now Available."/>
       <div className="flex justify-center sempage-mobile pb-6 w-4/5 m-auto">
+
         <div className="w-full h-fit pt-36 mt-6 year-box-mobile ">
           <p className="text-center font-bold">Select Year</p>
           <div className="flex justify-center">
