@@ -12,6 +12,7 @@
   "types": "module",
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.9.0",
     "lucide-react": "^0.503.0",
     "marked": "^15.0.11",
