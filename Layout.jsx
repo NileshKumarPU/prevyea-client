@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Footer, Header } from "./src/components";
+import { Analytics } from "@vercel/analytics/react"
 
 
 export default function Layout(){
@@ -8,6 +9,7 @@ export default function Layout(){
         <Header/>
         <Outlet/>
         <Footer/>
+        <Analytics/>
         </>
     )
 }

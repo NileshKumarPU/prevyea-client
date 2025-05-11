@@ -5,7 +5,7 @@ import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Layout from "../Layout.jsx";
 import { BCA, SemOne,SemTwo,SemFour,Admin,ComingSoon } from "./Pages";
-import { Analytics } from "@vercel/analytics/react"
+
 
 
 const router = createBrowserRouter([
@@ -72,5 +72,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   
     <RouterProvider router={router} />
+    
+    
  
 );
