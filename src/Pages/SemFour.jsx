@@ -16,16 +16,26 @@ function SemTwo() {
   }, [year, paperCode]);
 
   async function fetchurl(params) {
+    
+    
+    try {
     return await axios({
-      method: "post",
-      url: `https://prevyea-server.vercel.app/pdf`,
-      data: {
-        paperCode: paperCode,
-        year: year,
-      },
-    }).then((result) => {
-      setPdfUrl(`https://drive.google.com/file/d/${result.data}/preview`);
-    });
+        method: "post",
+        url: `https://prevyea-server.vercel.app/pdf`,
+        data: {
+          paperCode: paperCode,
+          year: year,
+        },
+      }).then((result) => {
+      
+        setPdfUrl(`https://drive.google.com/file/d/${result.data}/preview`);
+      });
+    }
+    catch (error) {
+
+      alert(" Please try after some time. The Database is not responding. ")
+  } 
+
   }
 
   return (
