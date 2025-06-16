@@ -2,6 +2,7 @@
 import { PaperCodeButton, AiSearchBar, YearButton } from "../components";
 import { useEffect, useState } from "react";
 import axios from 'axios'
+import MovingText from "../components/MovingText";
 
 
 function SemTwo() {
