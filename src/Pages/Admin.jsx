@@ -20,7 +20,7 @@ export default function Admin(){
 
     function clearForm(){
       setPaperCode('');
-      setYear();
+      setYear(0);
       setUrl('');
     }
 
