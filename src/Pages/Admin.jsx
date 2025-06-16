@@ -91,6 +91,12 @@ export default function Admin(){
       </div>
     </div>
         
+      <div className="max-w-md mx-auto mt-10">
+        <h1 className="text-xl font-bold mb-4 text-center">
+          Upload Your Documents
+        </h1>
+        <DragDrop/>
+      </div>
         </>
     )
 }

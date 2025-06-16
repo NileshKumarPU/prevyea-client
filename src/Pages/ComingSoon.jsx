@@ -1,9 +1,13 @@
-export default function ComingSoon(){
+import { DragDrop } from "../components";
 
-    return(
 
-        <>
-        <h1 className="text-center p-40">Under Development..ComingSoon</h1>
-        </>
-    )
+
+export default function ComingSoon() {
+  
+  return (
+    <>
+      <h1 className="text-center p-40">Under Development..ComingSoon</h1>
+
+    </>
+  );
 }

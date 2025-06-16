@@ -9,7 +9,8 @@ import SearchBar from "./SearchBar";
 import AiSearchBar from "./AiSearchBar";
 import CopyButton from "./CopyButton";
 import Typewriter from "./Typewriter";
+import DragDrop from "./DragDrop"
 
 
 
-export {Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton,Typewriter}
+export {Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton,Typewriter,DragDrop}

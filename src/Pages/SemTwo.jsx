@@ -115,28 +115,28 @@ function SemTwo() {
                   style={{ backgroundColor: "#D8F29D" }}
                   onClick={()=>{SetPaperCode('cc3')}}
                 >
-                 CC-1
+                 CC-3
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
                   style={{ backgroundColor: "#D8F29D" }}
                   onClick={()=>{SetPaperCode('cc4')}}
                 >
-                 CC-2
+                 CC-4
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
                   style={{ backgroundColor: "#D8F29D" }}
                   onClick={()=>{SetPaperCode('aecc2')}}
                 >
-                 AECC-1
+                 AECC-2
                 </button>
                 <button
                   className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
                   style={{ backgroundColor: "#D8F29D" } }
                   onClick={()=>{SetPaperCode('ge2')}}
                 >
-                 GE-1
+                 GE-2
                 </button>
                 
               </div>
