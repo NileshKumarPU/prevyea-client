@@ -10,7 +10,9 @@ import AiSearchBar from "./AiSearchBar";
 import CopyButton from "./CopyButton";
 import Typewriter from "./Typewriter";
 import DragDrop from "./DragDrop"
+import AuthOTP from "./AuthOTP";
+import UnauthorizedAccess from "./UnauthorizedAccess";
+import MovingText from "./MovingText"
 
 
-
-export {Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton,Typewriter,DragDrop}
+export {Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton,Typewriter,DragDrop,AuthOTP,UnauthorizedAccess,MovingText}

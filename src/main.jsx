@@ -4,7 +4,8 @@ import "./index.css";
 import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Layout from "../Layout.jsx";
-import { BCA, SemOne,SemTwo,SemFour,Admin,ComingSoon } from "./Pages";
+import { BCA, SemOne,SemTwo,SemFour,Admin,ComingSoon,Login,Dashboard,Signup, About, CampusConnect} from "./Pages";
+import { CookiesProvider } from "react-cookie";
 
 
 
@@ -61,8 +62,28 @@ const router = createBrowserRouter([
         
       },
       {
-        path: "/signup",
-        element: <ComingSoon/>,
+        path: "signup",
+        element: <Signup/>,
+        
+      },
+      {
+        path: "/login",
+        element: <Login/>,
+        
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard/>,
+        
+      },
+      {
+        path: "/about",
+        element: <About/>,
+        
+      },
+      {
+        path: "/campus",
+        element: <CampusConnect/>,
         
       },
     ],
@@ -71,7 +92,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   
+  <CookiesProvider>
+
     <RouterProvider router={router} />
+  </CookiesProvider>
     
     
  

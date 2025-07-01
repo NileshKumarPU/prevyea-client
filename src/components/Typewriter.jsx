@@ -7,24 +7,26 @@ const Typewriter = ({ text, speed = 50 }) => {
   useEffect(() => {
 
     
-    if (!text){setDisplayedText(''); return};
+    if (!text){
+      setDisplayedText(''); 
+      return
+    };
 
     if (index < text.length) {
-      const timeout = setTimeout(() => {
-       
+      const timeout = setTimeout(() => {  
         setDisplayedText((prev) => prev + text[index]);
         setIndex((prev) => prev + 1);
       }, speed);
-
-      return () => clearTimeout(timeout);
+    return () => clearTimeout(timeout);
     }
   
   }, [index, text, speed]);
 
   return (
     <div className="whitespace-pre-wrap font-mono text-lg">
-      {displayedText}
-      {/* <span className="animate-pulse">|</span> */}
+  
+         {displayedText}
+  
     </div>
   );
 };

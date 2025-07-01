@@ -1,13 +1,17 @@
 // src/pages/Home.js
-import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import React, { useEffect, useState } from "react";
 import RectangleCard from "./RectangleCard";
-
 import SearchBar from "./SearchBar";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+
+import { ToastContainer } from "react-toastify";
 
 function Home() {
+
+
+  
+
+
   return (
     <>
     <div className="bg-amber-50">
@@ -25,6 +29,7 @@ function Home() {
           <RectangleCard name="BCA" />
         </Link>
       </div>
+    <ToastContainer/>
     </div>
     </>
   );

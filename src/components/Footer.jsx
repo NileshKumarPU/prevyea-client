@@ -8,7 +8,7 @@ function Footer() {
         <div>
           <p className="font-medium pb-2 ">Copyright© PrevYea 2025</p>
           <a href="#" target="_blank" className="font-medium"> Visitors:
-              <img src="https://hitwebcounter.com/counter/counter.php?page=20505028&style=0024&nbdigits=5&type=page&initCount=0"      title="Counter Widget" Alt="Visit counter For Websites"   border="0" className="inline pl-2" /></a>    
+              <img src="https://hitwebcounter.com/counter/counter.php?page=20505028&style=0024&nbdigits=5&type=page&initCount=0"      title="Counter Widget" alt="Visit counter For Websites"   border="0" className="inline pl-2" /></a>    
         </div>
 
         <div className="imp-link">

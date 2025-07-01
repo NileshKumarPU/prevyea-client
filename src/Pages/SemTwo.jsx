@@ -43,7 +43,7 @@ function SemTwo() {
 
   return (
     <>
-      <MovingText text="All PYQs From 2020-2024 Are Now Available."/>
+      <MovingText text="All PYQs From 2020-2024 Are Now Available With AI answers generation feature."/>
       <div className="flex justify-center  sempage-mobile pb-6 w-4/5 m-auto">
         <div className="w-full h-fit pt-36 mt-6 year-box-mobile">
           <p className="text-center font-bold">Select Year</p>

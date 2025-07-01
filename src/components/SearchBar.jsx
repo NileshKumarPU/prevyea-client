@@ -1,41 +1,15 @@
 import Typewriter from "./Typewriter";
-import axios from "axios";
-import { useState,useRef } from "react";
+import { useState, useRef } from "react";
 import { Container, Copy, Search } from "lucide-react";
-import { useEffect } from "react";
-import CopyButton from "./CopyButton";
 
 export default function SearchBar(props) {
   const [query, setQuery] = useState("");
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
-  const[copySuccess,setCopySuccess]= useState();
- 
+  const [copySuccess, setCopySuccess] = useState();
 
-  
-
-  // const handleCopy= async()=>{
-  //   try {
-  //     await window.navigator.clipboard.writeText(answer);
-  //     setCopySuccess("Copied to clipboard!")
-     
-  // } catch (err) {
-  //     console.error(
-  //         "Unable to copy to clipboard.",
-  //         err
-  //     );
-  //     alert("Copy to clipboard failed.");
-  // }
-  // }
   const handleSearch = () => {
     setAnswer("This Service will be live Soon..");
-
-
-    
-       
-      
-      
-    
   };
 
   const handleKeyDown = (e) => {
@@ -62,12 +36,8 @@ export default function SearchBar(props) {
           </button>
         </div>
         <div>
-          <p>
-            <Typewriter text={answer}/>
-          </p>
+          <Typewriter text={answer} />
         </div>
-
-        
       </div>
     </>
   );

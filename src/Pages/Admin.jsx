@@ -1,23 +1,48 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import useToken from "../Hooks/useToken";
 import Login from "./Login";
 import axios from "axios";
-import { DragDrop } from "../components";
+import { DragDrop, UnauthorizedAccess } from "../components";
+import { useCookies } from "react-cookie";
+import { ToastContainer,toast } from "react-toastify";
+import {  useNavigate } from "react-router-dom";
 
 
 export default function Admin(){
 
-    const { token, setToken } = useToken();
-    if (!token) {
-      return <Login setToken={setToken} />;
+   
 
-    }
+    const [paperCode,setPaperCode] = useState("");
+    const [year,setYear]= useState(0);
+    const [url,setUrl] = useState("");
+    const navigate = useNavigate();
+    const [cookies,removeCookies] = useCookies();
+    const [username,setUsername] = useState("");
+    const [admin,setAdmin] = useState(false);
+    useEffect(() => {
+    const verifyCookie = async () => {
+      const { data } = await axios.post(
+        "https://prevyea-server.vercel.app/",
+        {},
+        { withCredentials: true }
+      );
+      const { status, user,admin } = data;
 
-    const [paperCode,setPaperCode] = useState();
-    const [year,setYear]= useState();
-    const [url,setUrl] = useState();
+      setUsername(user);
+      setAdmin(admin)
+      
+      
+      
+      if (!status) {
+        navigate("/login");
+      }
 
+      return;
+    };
+    verifyCookie();
+  }, [cookies, navigate, removeCookies]);
 
+   
     function clearForm(){
       setPaperCode('');
       setYear(0);
@@ -39,9 +64,14 @@ export default function Admin(){
           else alert("spmething went wrong")
       })
     }
+
+    console.log(admin);
+    
     return(
         <>
+        {!admin ?  <UnauthorizedAccess/> :
        <div className="mt-6 mb-6 flex items-center justify-center ">
+        <ToastContainer/>
       <div className="bg-white p-8 rounded-2xl shadow-lg bggreen w-full max-w-md">
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">Welcome Back 👋</h2>
         <form onSubmit={handleSubmit}>
@@ -88,16 +118,10 @@ export default function Admin(){
 
       <div className="bg-white p-8 rounded-2xl shadow-lg bggreen w-full max-w-md">
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">Welcome Back 👋</h2>
-        <img src="" alt="" />
+       
       </div>
-    </div>
-        
-      <div className="max-w-md mx-auto mt-10">
-        <h1 className="text-xl font-bold mb-4 text-center">
-          Upload Your Documents
-        </h1>
-        <DragDrop/>
-      </div>
+    </div>}
+       
         </>
     )
 }
