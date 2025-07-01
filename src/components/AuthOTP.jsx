@@ -39,7 +39,7 @@ export default function AuthOTP({ userData }) {
     });
             
     const { success, message } = result.data;
-    console.log(success,message);
+    console.log("Here",success,message);
     
     if (success) {
             
