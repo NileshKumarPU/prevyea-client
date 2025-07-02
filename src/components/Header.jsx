@@ -14,8 +14,7 @@ function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    console.log(cookies);
-    console.log("here");
+    
 
     const verifyCookie = async () => {
       const { data } = await axios.post(
@@ -54,16 +53,20 @@ function Header() {
           { withCredentials: true }
         );
 
-        const { status, message } = data;
-        if (status) {
+        const { success, message } = data;
+        
+        if (success) {
           // setIsLoggedIn(false);
+          
           toast.success(message, {
             position: "top-right",
-          });
-
+          })
+         
           setTimeout(() => {
-            navigate("/dashboard");
+            location.reload();
           }, 1000);
+          
+
         }else{toast.error(message);}
       };
       logout();
