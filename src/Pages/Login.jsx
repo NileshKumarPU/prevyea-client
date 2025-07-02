@@ -31,8 +31,8 @@ export default function Login() {
       });
       setTimeout(() => {
         navigate("/admin");
+        location.reload();
       }, 1000);
-      location.reload();
     } else {
       toast.error(message, {
         position: "bottom-left",
