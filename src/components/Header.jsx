@@ -125,7 +125,7 @@ function Header() {
               CampusConnect
             </Link>
             {!isLoggedIn ? (
-              <Link to="/login" className="psx-4">
+              <Link to="/login" className="px-4">
                 {" "}
                 Log In/Sign Up
               </Link>
