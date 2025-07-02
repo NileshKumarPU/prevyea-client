@@ -9,11 +9,13 @@ import { toast, ToastContainer } from "react-toastify";
 
 function Header() {
   const navigate = useNavigate();
+  const [cookies, removeCookies] = useCookies(["token"]);
   const [username, setUsername] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    
+    console.log(cookies);
+    console.log("here");
 
     const verifyCookie = async () => {
       const { data } = await axios.post(
@@ -22,7 +24,7 @@ function Header() {
         { withCredentials: true }
       );
       const { status, user } = data;
-
+  
       setUsername(user);
       setIsLoggedIn(status);
 
@@ -54,7 +56,7 @@ function Header() {
 
         const { status, message } = data;
         if (status) {
-          setIsLoggedIn(false);
+          // setIsLoggedIn(false);
           toast.success(message, {
             position: "top-right",
           });
