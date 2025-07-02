@@ -9,13 +9,11 @@ import { toast, ToastContainer } from "react-toastify";
 
 function Header() {
   const navigate = useNavigate();
-  const [cookies, removeCookies] = useCookies(["token"]);
   const [username, setUsername] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    console.log(cookies);
-    console.log("here");
+    
 
     const verifyCookie = async () => {
       const { data } = await axios.post(
@@ -121,7 +119,6 @@ function Header() {
             <Link to="/campus" className="px-4">
               CampusConnect
             </Link>
-
             {!isLoggedIn ? (
               <Link to="/login" className="psx-4">
                 {" "}
