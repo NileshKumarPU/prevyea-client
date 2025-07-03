@@ -34,7 +34,7 @@ export default function CampusConnect(){
 const books = [
   {
     title: "CC-2: available",
-    pdf: "https://example.com/algorithms.pdf",
+    pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751502947/PrevYea_CC3_Micro_gp1rki.pdf",
   },
   {
     title: "CC-4",
