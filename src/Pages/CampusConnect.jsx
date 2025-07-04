@@ -37,15 +37,15 @@ const books = [
     pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751502947/PrevYea_CC3_Micro_gp1rki.pdf",
   },
   {
-    title: "CC-4: at 12:30",
-    pdf: "#",
+    title: "CC-4: Available",
+    pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751658638/PrevYea_CC4_Micro_loyzok.pdf",
   },
   {
-    title: "GE-2",
+    title: "GE-2 Awaited",
     pdf: "https://example.com/js-good-parts.pdf",
   },
   {
-    title: "AECC-2",
+    title: "AECC-2 Awaited",
     pdf: "https://example.com/design-patterns.pdf",
   },
 
