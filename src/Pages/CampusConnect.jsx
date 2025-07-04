@@ -37,8 +37,8 @@ const books = [
     pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751502947/PrevYea_CC3_Micro_gp1rki.pdf",
   },
   {
-    title: "CC-4",
-    pdf: "https://example.com/clean-code.pdf",
+    title: "CC-4: Available by 11 PM",
+    pdf: "#",
   },
   {
     title: "GE-2",

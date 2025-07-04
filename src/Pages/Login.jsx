@@ -13,30 +13,35 @@ export default function Login() {
 
   const login = async (e) => {
     e.preventDefault();
-    const result = await axios({
-      method: "post",
-      url: `https://prevyea-server.vercel.app/login`,
+    try {
+      
+      const result = await axios({
+        method: "post",
+        url: `https://prevyea-server.vercel.app/login`,
         data: {
-        email: email,
-        password: pass,
-      },
-      withCredentials: true,
-    });
-
-    const { success, message } = result.data;
-
-    if (success) {
-      toast.success(message, {
-        position: "bottom-right",
+          email: email,
+          password: pass,
+        },
+        withCredentials: true,
       });
-      setTimeout(() => {
-        navigate("/admin");
-        location.reload();
-      }, 1000);
-    } else {
-      toast.error(message, {
-        position: "bottom-left",
-      });
+      
+      const { success, message } = result.data;
+      
+      if (success) {
+        toast.success(message, {
+          position: "bottom-right",
+        });
+        setTimeout(() => {
+          navigate("/admin");
+          location.reload();
+        }, 1000);
+      } else {
+        toast.error(message, {
+          position: "bottom-left",
+        });
+      }
+    } catch (error) {
+      alert(error)
     }
   };
 
