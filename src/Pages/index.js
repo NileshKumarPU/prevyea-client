@@ -10,6 +10,7 @@ import Signup from "./Signup";
 import MovingText from "../components/MovingText";
 import About from "./About";
 import CampusConnect from "./CampusConnect";
+import Profile from "../components/Profile";
 
 
-export {BCA,SemOne,SemTwo,SemFour,Admin,ComingSoon,MovingText,Login,Dashboard,Signup,About,CampusConnect}
+export {BCA,SemOne,SemTwo,SemFour,Admin,ComingSoon,MovingText,Login,Dashboard,Signup,About,CampusConnect,Profile}

@@ -5,14 +5,18 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ArrowUpRight, SquareArrowOutUpRight } from "lucide-react";
 import MovingText from "../components/MovingText";
+import { ClipLoader,HashLoader,MoonLoader } from "react-spinners";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const navigate = useNavigate();
+  const [loading,setLoading]= useState(false);
 
   const login = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
     try {
       
       const result = await axios({
@@ -26,7 +30,7 @@ export default function Login() {
       });
       
       const { success, message } = result.data;
-      
+      setLoading(false);
       if (success) {
         toast.success(message, {
           position: "bottom-right",
@@ -47,11 +51,7 @@ export default function Login() {
 
   return (
     <>
-      {/* <button value={"Signup"}>
-        <Link to="/signup">Sign Up</Link>
-      </button> */}
-
-      {/* ff */}
+    
       <div className=" p-6 bg-amber-50 min-h-screen ">
         <MovingText text="Register now to unlock more features."/>
 
@@ -82,10 +82,19 @@ export default function Login() {
                 required
               />
             </div>
-            <button
+
+            {loading? 
+              <div className="flex justify-center">
+
+                <HashLoader/>
+              </div>
+            : 
+              <div>
+
+              <button
               type="submit"
               className="w-full outline-1  py-2 rounded-lg hover:bg-blue-700 transition duration-300 "
-            >
+              >
               Login
             </button>
             <h4 className="text-center">OR</h4>
@@ -99,9 +108,15 @@ export default function Login() {
                 <SquareArrowOutUpRight className="inline align-middle  " />
               </button>
             </Link>
+              </div>
+
+              
+              }
+
             <ToastContainer />
           </form>
         </div>
+
       </div>
     </>
   );

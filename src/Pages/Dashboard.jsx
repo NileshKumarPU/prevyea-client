@@ -1,43 +1,77 @@
-import { useState, useEffect } from "react";
-import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import useVerifyCookie from "../Hooks/useVerify";
+import { useState } from "react";
+import Profile from "../components/Profile";
 
 export default function Dashboard() {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [fullname, setfullname] = useState("");
-  const [cookies, removeCookies] = useCookies();
-  const navigate = useNavigate();
+  const { username, email, fullname, loading } = useVerifyCookie();
+  const [activeTab, setActiveTab] = useState("profile");
+  const renderContent = () => {
+    switch (activeTab) {
+      case "profile":
+        return <Profile username={username} email={email} fullname={fullname}/>;
+      case "settings":
+        return <div>Settings Content</div>;
+      case "security":
+        return <div>Security Content</div>;
+      case "notifications":
+        return <div>Notifications Content</div>;
+      default:
+        return <div>Select a tab</div>;
+    }
+  };
 
-  useEffect(() => {
-    const verifyCookie = async () => {
-      const { data } = await axios.post(
-        "https://prevyea-server.vercel.app/",
-        {},
-        { withCredentials: true }
-      );
-      const { status, user, email, fullname } = data;
-      setUsername(user);
-      setEmail(email);
-      setfullname(fullname);
-      if (!success) {
-        navigate("/login");
-      }
-      return;
-    };
-    verifyCookie();
-  }, [cookies, navigate, removeCookies]);
   return (
     <>
-      <div className="w-full flex flex-col justify-center text-center min-h-screen">
-        <h1>Dashboard</h1>
+      <div className="flex h-screen">
+        {/* Sidebar */}
+        <div className="w-64 bggreen text-black flex flex-col p-4 space-y-4">
+          <h2 className="text-xl font-bold mb-4">Dashboard</h2>
+            <div className="grid space-y-2">
+              <button
+                onClick={() => setActiveTab("profile")}
+                className={`text-left px-2 py-1 rounded ${
+                  activeTab === "profile" ? "bg-gray-600" : ""
+                }`}
+                >
+                Update Profile
+              </button>
+              <button
+                onClick={() => setActiveTab("settings")}
+                className={`text-left px-2 py-1 rounded ${
+                  activeTab === "settings" ? "bg-gray-600" : ""
+                }`}
+              >
+                Settings
+              </button>
+              <button
+                onClick={() => setActiveTab("security")}
+                className={`text-left px-2 py-1 rounded ${
+                  activeTab === "security" ? "bg-gray-600" : ""
+                }`}
+              >
+                Security
+              </button>
+              <button
+                onClick={() => setActiveTab("notifications")}
+                className={`text-left px-2 py-1 rounded ${
+                  activeTab === "notifications" ? "bg-gray-600" : ""
+                }`}
+                >
+                Notifications
+              </button>
+            </div>
+            </div>
 
-        <div>
-          <h3>Username: {username}</h3>
-          <h3>Fullname: {fullname}</h3>
-          <h3>E-mail: {email}</h3>
-        </div>
+                {loading ? (
+                  <div className="flex justify-center text-center items-center h-screen">
+                    <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#2CB8C6]"></div>
+                    <p>Checking authentication...</p>;
+                  </div>
+                ) : (
+                  
+                  
+        <div className="flex-1 bg-amber p-6">{renderContent()}</div>
+      )}
       </div>
     </>
   );

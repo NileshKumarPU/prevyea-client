@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthOTP } from "../components";
 import { toast,ToastContainer } from "react-toastify";
+import { HashLoader } from "react-spinners";
 
 export default function Signup() {
   const [username, setUsername] = useState("");
@@ -11,7 +12,13 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const [admin, setAdmin] = useState(false);
   const [showAuth,setShowAuth] = useState(false)
+  const [loading,setLoading] = useState(false);
   const navigate = useNavigate();
+
+   const isValidGmail = (email) => {
+    const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    return gmailRegex.test(email);
+  };
 
   const user = {
     username:username,
@@ -25,6 +32,13 @@ export default function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
+    if (!isValidGmail(email)) {
+      toast.error("Please enter a valid Gmail address.");
+      setLoading(false)
+      return
+    }
     
     const result = await axios({
         
@@ -36,7 +50,7 @@ export default function Signup() {
     })
     
     
-    
+    setLoading(false);
     const {success,message} = result.data
     if(success){
     setShowAuth(success); // Shows screen for entering otp.
@@ -147,12 +161,15 @@ export default function Signup() {
               </button>
             </div>
           </div>
+          {loading? <div className="flex justify-center"> <HashLoader/>
+            </div> :
             <button
-              type="submit"
-              className="w-full outline-1  py-2 rounded-lg hover:bg-blue-700 transition duration-300 "
+            type="submit"
+            className="w-full outline-1  py-2 rounded-lg hover:bg-blue-700 transition duration-300 "
             >
               SignUp
             </button>
+            }
             
             <ToastContainer />
           </form>
