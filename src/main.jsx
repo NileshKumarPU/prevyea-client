@@ -6,6 +6,7 @@ import Home from "./components/Home.jsx";
 import Layout from "../Layout.jsx";
 import { BCA, SemOne,SemTwo,SemFour,Admin,ComingSoon,Login,Dashboard,Signup, About, CampusConnect} from "./Pages";
 import { CookiesProvider } from "react-cookie";
+import ForgotPass from "./components/ForgotPass.jsx";
 
 
 
@@ -84,6 +85,11 @@ const router = createBrowserRouter([
       {
         path: "/campus",
         element: <CampusConnect/>,
+        
+      },
+      {
+        path: "/forgotpass",
+        element: <ForgotPass/>,
         
       },
     ],

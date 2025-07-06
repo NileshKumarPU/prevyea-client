@@ -13,6 +13,7 @@ import DragDrop from "./DragDrop"
 import AuthOTP from "./AuthOTP";
 import UnauthorizedAccess from "./UnauthorizedAccess";
 import MovingText from "./MovingText"
+import ForgotPass from "./ForgotPass";
 
 
-export {Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton,Typewriter,DragDrop,AuthOTP,UnauthorizedAccess,MovingText}
+export {ForgotPass,Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton,Typewriter,DragDrop,AuthOTP,UnauthorizedAccess,MovingText}

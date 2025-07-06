@@ -63,9 +63,9 @@ export default function Dashboard() {
             </div>
 
                 {loading ? (
-                  <div className="flex justify-center text-center items-center h-screen">
+                  <div className="w-full flex justify-center max-h-screen m-auto">
                     <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-[#2CB8C6]"></div>
-                    <p>Checking authentication...</p>;
+                    <p>Checking authentication...</p>
                   </div>
                 ) : (
                   
