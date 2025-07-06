@@ -17,15 +17,20 @@ function Header() {
     
 
     const verifyCookie = async () => {
-      const { data } = await axios.post(
-        "https://prevyea-server.vercel.app/",
-        {},
-        { withCredentials: true }
-      );
-      const {success, user } = data;
-  
-      setUsername(user);
-      setIsLoggedIn(success);
+      try {
+        
+        const { data } = await axios.post(
+          "https://prevyea-server.vercel.app/",
+          {},
+          { withCredentials: true }
+        );
+        const {success, user } = data;
+        
+        setUsername(user);
+        setIsLoggedIn(success);
+      } catch (error) {
+        alert("Backend Server Down..")
+      }
 
       // if (!status) {
       //   navigate("/login");

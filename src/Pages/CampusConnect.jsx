@@ -41,7 +41,7 @@ const books = [
     pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751658638/PrevYea_CC4_Micro_loyzok.pdf",
   },
   {
-    title: "GE-2 Awaited",
+    title: "GE-2 11 PM 7 July",
     pdf: "https://example.com/js-good-parts.pdf",
   },
   {
