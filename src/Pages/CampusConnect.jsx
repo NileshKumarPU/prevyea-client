@@ -15,8 +15,8 @@ export default function CampusConnect(){
         {},
         { withCredentials: true }
       );
-      const { status, user } = data;
-      setIsLoggedIn(status);
+      const { success, user } = data;
+      setIsLoggedIn(success);
 
       return;
     };

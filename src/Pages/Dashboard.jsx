@@ -21,7 +21,7 @@ export default function Dashboard() {
       setUsername(user);
       setEmail(email);
       setfullname(fullname);
-      if (!status) {
+      if (!success) {
         navigate("/login");
       }
       return;

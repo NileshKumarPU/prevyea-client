@@ -26,14 +26,14 @@ export default function Admin(){
         {},
         { withCredentials: true }
       );
-      const { status, user,admin } = data;
+      const { success, user,admin } = data;
 
       setUsername(user);
       setAdmin(admin)
       
       
       
-      if (!status) {
+      if (!success) {
         navigate("/login");
       }
 

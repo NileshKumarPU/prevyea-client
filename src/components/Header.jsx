@@ -22,10 +22,10 @@ function Header() {
         {},
         { withCredentials: true }
       );
-      const { status, user } = data;
+      const {success, user } = data;
   
       setUsername(user);
-      setIsLoggedIn(status);
+      setIsLoggedIn(success);
 
       // if (!status) {
       //   navigate("/login");
