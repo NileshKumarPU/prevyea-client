@@ -41,8 +41,8 @@ const books = [
     pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751658638/PrevYea_CC4_Micro_loyzok.pdf",
   },
   {
-    title: "GE-2 1-2 AM 8 July  ",
-    pdf: "#",
+    title: "GE-2: Available",
+    pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751926571/PrevYea_GE2_Micro_rnytsi.pdf",
   },
   {
     title: "AECC-2 Awaited",
