@@ -35,9 +35,9 @@ export default function Login() {
         toast.success(message, {
           position: "bottom-right",
         });
+
         setTimeout(() => {
-          navigate("/");
-          location.reload();
+          window.location.href = "/"; // Navigates + reloads the whole app
         }, 1000);
       } else {
         toast.error(message, {
@@ -54,70 +54,67 @@ export default function Login() {
       <div className=" p-6 bg-amber-50 min-h-screen ">
         <MovingText text="Register now to unlock more features." />
 
-      
-          <div className="max-w-md mx-auto p-6 bggreen shadow-md rounded-xl ">
-            <h2 className="text-2xl font-bold mb-6 text-center">User Login</h2>
-            <form onSubmit={login}>
-              <div className="mb-4 ">
-                <label className="block  mb-2">
-                  Email<span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 transition duration-300 bg-amber-50"
-                  value={email}
-                  placeholder="abcd@xyz.com"
-                  onChange={(e) => setEmail(e.target.value.toLowerCase())}
-                  required
-                />
-              </div>
-              <div className="mb-6">
-                <label className="block  mb-2">
-                  Password<span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="password"
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 transition duration-300 bg-amber-50"
-                  value={pass}
-                  placeholder="Abc@123"
-                  onChange={(e) => setPass(e.target.value)}
-                  required
-                />
-                <Link to="/forgotpass">Forgot Password?</Link>
-              </div>
+        <div className="max-w-md mx-auto p-6 bggreen shadow-md rounded-xl ">
+          <h2 className="text-2xl font-bold mb-6 text-center">User Login</h2>
+          <form onSubmit={login}>
+            <div className="mb-4 ">
+              <label className="block  mb-2">
+                Email<span className="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 transition duration-300 bg-amber-50"
+                value={email}
+                placeholder="abcd@xyz.com"
+                onChange={(e) => setEmail(e.target.value.toLowerCase())}
+                required
+              />
+            </div>
+            <div className="mb-6">
+              <label className="block  mb-2">
+                Password<span className="text-red-500">*</span>
+              </label>
+              <input
+                type="password"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 transition duration-300 bg-amber-50"
+                value={pass}
+                placeholder="Abc@123"
+                onChange={(e) => setPass(e.target.value)}
+                required
+              />
+              <Link to="/forgotpass">Forgot Password?</Link>
+            </div>
 
-              {loading ? (
-                <div className="flex justify-center">
-                  <HashLoader />
-                </div>
-              ) : (
-                <div>
+            {loading ? (
+              <div className="flex justify-center">
+                <HashLoader />
+              </div>
+            ) : (
+              <div>
+                <button
+                  type="submit"
+                  className="w-full outline-1  py-2 rounded-lg hover:bg-blue-700 transition duration-300 "
+                >
+                  Login
+                </button>
+
+                <h4 className="text-center">OR</h4>
+                <Link to="/signup">
                   <button
-                    type="submit"
-                    className="w-full outline-1  py-2 rounded-lg hover:bg-blue-700 transition duration-300 "
+                    value={"Signup"}
+                    type="button"
+                    className="w-full bgblue py-2 rounded-lg hover:bg-blue-700 transition duration-300"
                   >
-                    Login
+                    Sign Up{" "}
+                    <SquareArrowOutUpRight className="inline align-middle  " />
                   </button>
+                </Link>
+              </div>
+            )}
 
-                  <h4 className="text-center">OR</h4>
-                  <Link to="/signup">
-                    <button
-                      value={"Signup"}
-                      type="button"
-                      className="w-full bgblue py-2 rounded-lg hover:bg-blue-700 transition duration-300"
-                    >
-                      Sign Up{" "}
-                      <SquareArrowOutUpRight className="inline align-middle  " />
-                    </button>
-                  </Link>
-                </div>
-              )}
-
-              <ToastContainer />
-            </form>
-          </div>
-         
-        
+            <ToastContainer />
+          </form>
+        </div>
       </div>
     </>
   );
