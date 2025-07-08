@@ -36,7 +36,7 @@ export default function Login() {
           position: "bottom-right",
         });
         setTimeout(() => {
-          navigate("/admin");
+          navigate("/");
           location.reload();
         }, 1000);
       } else {
