@@ -107,10 +107,10 @@ export default function AiSearchBar() {
             <p className="text-sm text-indigo-700 mb-2 font-semibold">
               🧑 You: {entry.q}
             </p>
-            <ReactMarkdown className="text-sm text-gray-700 whitespace-pre-wrap">
-              🤖 Gemini: {entry.a}
-            </ReactMarkdown>
-            {/* <p className="text-sm text-gray-700">🤖 Gemini: {entry.a}</p> */}
+            
+            <p className="text-sm text-gray-700">🤖 Gemini:</p>
+            <ReactMarkdown children={entry.a} className="text-sm text-gray-700 whitespace-pre-wrap"/>
+           
 
             {/* Copy Button */}
             <button
