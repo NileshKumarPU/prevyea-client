@@ -46,7 +46,7 @@ export default function CampusConnect() {
   ];
 
   return (
-    <div className="my-8 rounded-2xl outline-1 shadow-lg" style={{backgroundColor:"white", padding: "2rem", minHeight: "100vh" }}>
+    <div className="my-8 rounded-2xl outline-1 shadow-lg" style={{backgroundColor:"white", padding: "2rem" }}>
       <h1 style={{ color: "#2CB8C6", fontSize: "2rem", marginBottom: "1rem" }}>
         📚 Exam CheatSheet
       </h1>
