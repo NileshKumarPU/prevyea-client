@@ -263,7 +263,7 @@ function SemTwo() {
                 </div> */}
               </div>
 
-              <AiSearchBar text="Get Answered by AI" />
+              <AiSearchBar text="🔥AI-Powered Answers" />
             </div>
           </div>
         </div>
