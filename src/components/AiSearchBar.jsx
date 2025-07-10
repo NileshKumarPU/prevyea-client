@@ -23,7 +23,7 @@ export default function AiSearchBar() {
       },
     });
   
-    fakeResponse = result.data.contents;
+    const fakeResponse = result.data.contents;
 
     setTimeout(() => {
       setHistory([...history, { q: query, a: fakeResponse }]);
