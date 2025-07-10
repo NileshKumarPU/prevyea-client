@@ -1,13 +1,17 @@
-import { PaperCodeButton, AiSearchBar, YearButton, PDFViewer } from "../components";
+import {
+  PaperCodeButton,
+  AiSearchBar,
+  YearButton,
+  PDFViewer,
+} from "../components";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MovingText from "../components/MovingText";
 import CampusConnect from "./CampusConnect";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import '@react-pdf-viewer/default-layout/lib/styles/index.css';
-import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
-
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 
 function SemTwo() {
   const [year, setYear] = useState(2020);
@@ -112,7 +116,9 @@ function SemTwo() {
       setPdfUrl("/na.pdf");
     }
   }
-    activeTab? document.body.style.backgroundColor="#fffbeb" : document.body.style.backgroundColor="#ecfdf5";
+  activeTab
+    ? (document.body.style.backgroundColor = "#fffbeb")
+    : (document.body.style.backgroundColor = "#ecfdf5");
 
   return (
     <>
@@ -251,7 +257,7 @@ function SemTwo() {
                 <h1 className="text-center text-md font-bold">
                   CURRENT PYQ IS {paperCode.toUpperCase()} {year}
                 </h1>
-                <PDFViewer url={pdfUrl}/>
+                <PDFViewer url={pdfUrl} />
                 {/* <div style={{ height: "600px" }}>
                   <Worker
                     workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
@@ -262,12 +268,10 @@ function SemTwo() {
                   </Worker>
                 </div> */}
               </div>
-
             </div>
           </div>
-          <div className="bg-emerald-100 w-full pt-4 h-screen">
-
-              <AiSearchBar text="🔥AI-Powered Answers" />
+          <div className="bg-emerald-100 w-full py-4 md:h-screen">
+            <AiSearchBar text="🔥AI-Powered Answers" />
           </div>
         </div>
       ) : (
@@ -276,7 +280,7 @@ function SemTwo() {
             <CampusConnect />
           </div>
           <div className="w-1/2">
-            <AiSearchBar/>
+            <AiSearchBar />
           </div>
         </div>
       )}

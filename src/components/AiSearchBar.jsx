@@ -15,16 +15,16 @@ export default function AiSearchBar() {
     setLoading(true);
 
     // Replace this with your actual Gemini API call
-    // const result = await axios({
-    //   method: "post",
-    //   url: "https://prevyea-server.vercel.app/aisearch",
-    //   data: {
-    //     searchquery: query,
-    //   },
-    // });
+    const result = await axios({
+      method: "post",
+      url: "https://prevyea-server.vercel.app/aisearch",
+      data: {
+        searchquery: query,
+      },
+    });
   
-    const fakeResponse = "loflal;msd;fmaaldmflkankgbaifhgnlachlkr gwekgh liweclnghbksdjb ssjdhbvsdvbndbvliadhfguehvhadfkghkj;ahgo[qehrg;h qeirfh"
-    // result.data.contents;
+    const fakeResponse =result.data.contents;
+    // "loflal;msd;fmaaldmflkankgbaifhgnlachlkr gwekgh liweclnghbksdjb ssjdhbvsdvbndbvliadhfguehvhadfkghkj;ahgo[qehrg;h qeirfh"
 
     setTimeout(() => {
       setHistory([...history, { q: query, a: fakeResponse }]);
@@ -96,11 +96,11 @@ export default function AiSearchBar() {
       </div>
 
       {/* History */}
-      <div className="max-h-60 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-indigo-300 pr-2">
+      <div className="max-h-80 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-indigo-300 pr-2">
         {history.map((entry, i) => (
           <motion.div
             key={i}
-            className="bg-white rounded-xl p-4 shadow border border-indigo-100"
+            className="bg-white rounded-xl p-4 shadow-lg border border-indigo-100"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.1 }}
