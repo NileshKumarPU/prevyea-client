@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
+import axios from "axios";
 
 export default function AiSearchBar() {
   const [query, setQuery] = useState("");
@@ -21,6 +22,7 @@ export default function AiSearchBar() {
         searchquery: query,
       },
     });
+  
     fakeResponse = result.data.contents;
 
     setTimeout(() => {
