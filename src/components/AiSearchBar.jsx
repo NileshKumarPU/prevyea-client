@@ -15,15 +15,16 @@ export default function AiSearchBar() {
     setLoading(true);
 
     // Replace this with your actual Gemini API call
-    const result = await axios({
-      method: "post",
-      url: "https://prevyea-server.vercel.app/aisearch",
-      data: {
-        searchquery: query,
-      },
-    });
+    // const result = await axios({
+    //   method: "post",
+    //   url: "https://prevyea-server.vercel.app/aisearch",
+    //   data: {
+    //     searchquery: query,
+    //   },
+    // });
   
-    const fakeResponse = result.data.contents;
+    const fakeResponse = "loflal;msd;fmaaldmflkankgbaifhgnlachlkr gwekgh liweclnghbksdjb ssjdhbvsdvbndbvliadhfguehvhadfkghkj;ahgo[qehrg;h qeirfh"
+    // result.data.contents;
 
     setTimeout(() => {
       setHistory([...history, { q: query, a: fakeResponse }]);
@@ -50,7 +51,7 @@ export default function AiSearchBar() {
   };
   return (
     <motion.div
-      className="max-w-xl mx-auto mt-10 p-6 bg-gradient-to-br from-white via-indigo-50 to-indigo-100 rounded-2xl shadow-xl"
+      className="max-w-4xl mx-auto mt-10 p-6 bg-gradient-to-br from-white via-indigo-50 to-indigo-100 rounded-2xl shadow-xl"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -109,14 +110,14 @@ export default function AiSearchBar() {
             </p>
             
             <p className="text-sm text-gray-700">🤖 Gemini:</p>
-            <ReactMarkdown children={entry.a} className="text-sm text-gray-700 whitespace-pre-wrap"/>
+            <ReactMarkdown children={entry.a}/>
            
 
             {/* Copy Button */}
             <button
               onClick={() => copyToClipboard(entry.a, i)}
               style={custombutton}
-              className="absolute top-2 right-2 text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-md hover:bg-indigo-200 transition"
+              className="text-xsbg-indigo-100 text-indigo-700 px-2 py-1 rounded-md hover:bg-indigo-200 transition"
             >
               {copiedIndex === i ? "✔ Copied!" : "📋 Copy"}
             </button>

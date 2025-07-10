@@ -263,8 +263,11 @@ function SemTwo() {
                 </div> */}
               </div>
 
-              <AiSearchBar text="🔥AI-Powered Answers" />
             </div>
+          </div>
+          <div className="bg-emerald-100 w-full pt-4 h-screen">
+
+              <AiSearchBar text="🔥AI-Powered Answers" />
           </div>
         </div>
       ) : (
@@ -273,7 +276,7 @@ function SemTwo() {
             <CampusConnect />
           </div>
           <div className="w-1/2">
-            <CampusConnect />
+            <AiSearchBar/>
           </div>
         </div>
       )}

@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="bg-emerald-50" style={{ padding: "2rem",  minHeight: "100vh" }}>
+    <div className="bg-emerald-100" style={{ padding: "2rem",  minHeight: "100vh" }}>
       <div style={{ maxWidth: "800px", margin: "0 auto", background: "#fff", padding: "2rem", borderRadius: "10px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}>
         <h1 style={{ color: "#2CB8C6", fontSize: "2.5rem", marginBottom: "0.5rem" }}>About PrevYea</h1>
         <h3 style={{ color: "#666", marginBottom: "1.5rem" }}>Your One-Stop PYQ Search</h3>
