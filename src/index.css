@@ -284,6 +284,16 @@ margin: auto;
  /* Responsive Design */
  @media (max-width: 768px) {
 
+  .tab-mobile{
+    min-width: 100%;
+  }
+  .resource-mobile{
+    display: grid;
+    width: 90%;
+    div{
+      width: 100%;
+    }
+  }
   .homepage{
     display: grid;
     gap: 2rem;

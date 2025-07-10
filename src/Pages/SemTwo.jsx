@@ -1,16 +1,20 @@
-import { PaperCodeButton, AiSearchBar, YearButton } from "../components";
+import { PaperCodeButton, AiSearchBar, YearButton, PDFViewer } from "../components";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MovingText from "../components/MovingText";
 import CampusConnect from "./CampusConnect";
+import { Worker, Viewer } from "@react-pdf-viewer/core";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+
 
 function SemTwo() {
   const [year, setYear] = useState(2020);
   const [paperCode, SetPaperCode] = useState("cc3");
-  const [pdfUrl, setPdfUrl] = useState(
-    "/cc3/2020.pdf"
-  );
+  const [pdfUrl, setPdfUrl] = useState("/cc3/2020.pdf");
   const [activeTab, setActiveTab] = useState(true);
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   const pdfs = [
     {
@@ -19,7 +23,7 @@ function SemTwo() {
     },
     {
       title: "ge22020",
-      url: "/ge/2020.pdf"
+      url: "/ge/2020.pdf",
     },
     {
       title: "cc32021",
@@ -105,38 +109,36 @@ function SemTwo() {
     if (foundUrl) {
       setPdfUrl(foundUrl.url);
     } else {
-      setPdfUrl(
-                "/na.pdf"
-      );
+      setPdfUrl("/na.pdf");
     }
   }
+    activeTab? document.body.style.backgroundColor="#fffbeb" : document.body.style.backgroundColor="#ecfdf5";
 
   return (
     <>
-      <div className="flex justify-center w-1/2 m-auto mt-0.5 font-light text-xl shadow-lg">
+      <div className="flex justify-center w-1/2 m-auto mt-0.5 font-light text-xl shadow-lg tab-mobile">
         <button
           className={`border-amber-200 p-2 w-full shadow-lg ${
-            activeTab ? "bggreen" : ""
+            activeTab ? "bggreen text-white" : ""
           }`}
           onClick={() => {
-            setActiveTab(true)
+            setActiveTab(true);
           }}
         >
-          Previous Year
+          📖 Previous Year
         </button>
         <button
           className={`border-amber-200 p-2 w-full shadow-lg  ${
-            activeTab ? "" : "bggreen"
+            activeTab ? "" : "bggreen text-white"
           }`}
-          
           onClick={() => {
             setActiveTab(false);
           }}
         >
-          Resources
+          📂 Resources
         </button>
       </div>
-      {activeTab ?  (
+      {activeTab ? (
         <div>
           <MovingText text="All PYQs From 2020-2024 Are Now Available With AI answers generation feature." />
           <div className="flex justify-center  sempage-mobile pb-6 w-4/5 m-auto">
@@ -249,23 +251,32 @@ function SemTwo() {
                 <h1 className="text-center text-md font-bold">
                   CURRENT PYQ IS {paperCode.toUpperCase()} {year}
                 </h1>
-                <iframe src={pdfUrl} height="96%" width="100%"></iframe>
+                <PDFViewer url={pdfUrl}/>
+                {/* <div style={{ height: "600px" }}>
+                  <Worker
+                    workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
+                  >
+                    <Viewer 
+                    fileUrl={pdfUrl}
+                    plugins={[defaultLayoutPluginInstance]} />
+                  </Worker>
+                </div> */}
               </div>
 
               <AiSearchBar text="Get Answered by AI" />
             </div>
           </div>
         </div>
-      ):(
-        <div className="flex w-4/5 justify-center gap-2 m-auto mt-2">
-          <div className="w-1/2 shadow-lg rounded-lg">
-        <CampusConnect/>
+      ) : (
+        <div className="flex w-4/5 justify-center gap-2 m-auto mt-2 resource-mobile ">
+          <div className="w-1/2">
+            <CampusConnect />
           </div>
-          <div className="w-1/2 shadow-lg rounded-lg">
-          <CampusConnect/>
+          <div className="w-1/2">
+            <CampusConnect />
           </div>
         </div>
-      ) }
+      )}
     </>
   );
 }

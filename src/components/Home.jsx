@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import RectangleCard from "./RectangleCard";
 import SearchBar from "./SearchBar";
 import { Link, useNavigate } from "react-router";
+import About from "../Pages/About"
 
 import { ToastContainer } from "react-toastify";
 
@@ -31,6 +32,7 @@ function Home() {
       </div>
     <ToastContainer/>
     </div>
+    <About/>
     </>
   );
 }

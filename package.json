@@ -11,6 +11,9 @@
   },
   "types": "module",
   "dependencies": {
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/default-layout": "^3.12.0",
+    "@react-pdf/renderer": "^4.3.0",
     "@tailwindcss/vite": "^4.1.4",
     "@vercel/analytics": "^1.5.0",
     "axios": "^1.9.0",

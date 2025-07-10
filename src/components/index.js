@@ -14,6 +14,7 @@ import AuthOTP from "./AuthOTP";
 import UnauthorizedAccess from "./UnauthorizedAccess";
 import MovingText from "./MovingText"
 import ForgotPass from "./ForgotPass";
+import PDFViewer from "./PDFViewer";
 
 
-export {ForgotPass,Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton,Typewriter,DragDrop,AuthOTP,UnauthorizedAccess,MovingText}
+export {PDFViewer,ForgotPass,Header,Footer,Home,RectangleCard,PaperCodeButton,YearButton,SearchBar,AiSearchBar,CopyButton,Typewriter,DragDrop,AuthOTP,UnauthorizedAccess,MovingText}
