@@ -1,4 +1,4 @@
-import { AiSearchBar, PaperCodeButton, SearchBar, YearButton, } from "../components";
+import { AiSearchBar } from "../components";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MovingText from "../components/MovingText";

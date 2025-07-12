@@ -1,9 +1,4 @@
-import {
-  PaperCodeButton,
-  AiSearchBar,
-  YearButton,
-  PDFViewer,
-} from "../components";
+import { AiSearchBar, CheatSheet, PDFViewer } from "../components";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MovingText from "../components/MovingText";
@@ -18,88 +13,87 @@ function SemTwo() {
   const [paperCode, SetPaperCode] = useState("cc3");
   const [pdfUrl, setPdfUrl] = useState("/cc3/2020.pdf");
   const [activeTab, setActiveTab] = useState(true);
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   const pdfs = [
     {
       title: "ge22021",
-      url: "/ge/2021.pdf",
+      url: "/sem2/ge2/2021.pdf",
     },
     {
       title: "ge22020",
-      url: "/ge/2020.pdf",
+      url: "/sem2/ge2/2020.pdf",
     },
     {
       title: "cc32021",
-      url: "/cc3/2021.pdf",
+      url: "/sem2/cc3/2021.pdf",
     },
     {
       title: "cc32020",
-      url: "/cc3/2020.pdf",
+      url: "/sem2/cc3/2020.pdf",
     },
     {
       title: "ge22024",
-      url: "/ge/2024.pdf",
+      url: "/sem2/ge2/2024.pdf",
     },
     {
       title: "ge22023",
-      url: "/ge/2023.pdf",
+      url: "/sem2/ge2/2023.pdf",
     },
     {
       title: "ge22022",
-      url: "/ge/2022.pdf",
+      url: "/sem2/ge2/2022.pdf",
     },
     {
       title: "aecc22021",
-      url: "/aecc/2021.pdf",
+      url: "/sem2/aecc/2021.pdf",
     },
     {
       title: "aecc22020",
-      url: "/aecc/2020.pdf",
+      url: "/sem2/aecc/2020.pdf",
     },
     {
       title: "cc32023",
-      url: "/cc3/2023.pdf",
+      url: "/sem2/cc3/2023.pdf",
     },
     {
       title: "cc42024",
-      url: "/cc4/2024.pdf",
+      url: "/sem2/cc4/2024.pdf",
     },
     {
       title: "cc42023",
-      url: "/cc4/2023.pdf",
+      url: "/sem2/cc4/2023.pdf",
     },
     {
       title: "cc42022",
-      url: "/cc4/2022.pdf",
+      url: "/sem2/cc4/2022.pdf",
     },
     {
       title: "cc32024",
-      url: "/cc3/2024.pdf",
+      url: "/sem2/cc3/2024.pdf",
     },
     {
       title: "cc32022",
-      url: "/cc3/2022.pdf",
+      url: "/sem2/cc3/2022.pdf",
     },
     {
       title: "cc42021",
-      url: "/cc4/2021.pdf",
+      url: "/sem2/cc4/2021.pdf",
     },
     {
       title: "cc42020",
-      url: "/cc4/2020.pdf",
+      url: "/sem2/cc4/2020.pdf",
     },
     {
       title: "aecc22024",
-      url: "/aecc/2024.pdf",
+      url: "/sem2/aecc/2024.pdf",
     },
     {
       title: "aecc22023",
-      url: "/aecc/2023.pdf",
+      url: "/sem2/aecc/2023.pdf",
     },
     {
       title: "aecc22022",
-      url: "/aecc/2022.pdf",
+      url: "/sem2/aecc/2022.pdf",
     },
   ];
 
@@ -153,8 +147,9 @@ function SemTwo() {
               <div className="flex justify-center ">
                 <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-5 border-2 year-list-mobile">
                   <button
-                    className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
-                    style={{ backgroundColor: "#2CB8C6" }}
+                    className={`px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg ${
+                      year === 2020 ? "bg-black" : "bgblue"
+                    }`}
                     onClick={() => {
                       setYear(2020);
                     }}
@@ -162,8 +157,9 @@ function SemTwo() {
                     2020
                   </button>
                   <button
-                    className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
-                    style={{ backgroundColor: "#2CB8C6" }}
+                    className={`px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg ${
+                      year === 2021 ? "bg-black" : "bgblue"
+                    }`}
                     onClick={() => {
                       setYear(2021);
                     }}
@@ -171,8 +167,9 @@ function SemTwo() {
                     2021
                   </button>
                   <button
-                    className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
-                    style={{ backgroundColor: "#2CB8C6" }}
+                    className={`px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg ${
+                      year === 2022 ? "bg-black" : "bgblue"
+                    }`}
                     onClick={() => {
                       setYear(2022);
                     }}
@@ -180,8 +177,9 @@ function SemTwo() {
                     2022
                   </button>
                   <button
-                    className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
-                    style={{ backgroundColor: "#2CB8C6" }}
+                    className={`px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg ${
+                      year === 2023 ? "bg-black" : "bgblue"
+                    }`}
                     onClick={() => {
                       setYear(2023);
                     }}
@@ -189,8 +187,9 @@ function SemTwo() {
                     2023
                   </button>
                   <button
-                    className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
-                    style={{ backgroundColor: "#2CB8C6" }}
+                    className={`px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg ${
+                      year === 2024 ? "bg-black" : "bgblue"
+                    }`}
                     onClick={() => {
                       setYear(2024);
                     }}
@@ -198,8 +197,9 @@ function SemTwo() {
                     2024
                   </button>
                   <button
-                    className="px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg"
-                    style={{ backgroundColor: "#2CB8C6" }}
+                    className={`px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg ${
+                      year === 2025 ? "bg-black" : "bgblue"
+                    }`}
                     onClick={() => {
                       setYear(2025);
                     }}
@@ -215,8 +215,9 @@ function SemTwo() {
                 <div className=" flex justify-center ">
                   <div className=" bg-white py-2 px-3 rounded-3xl shadow-lg flex justify-center gap-5 border-2">
                     <button
-                      className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
-                      style={{ backgroundColor: "#D8F29D" }}
+                      className={`px-5 py-2 font-medium outline-none rounded-3xl shadow-lg ${
+                        paperCode === "cc3" ? "bg-black text-white" : "bggreen"
+                      }`}
                       onClick={() => {
                         SetPaperCode("cc3");
                       }}
@@ -224,8 +225,9 @@ function SemTwo() {
                       CC-3
                     </button>
                     <button
-                      className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
-                      style={{ backgroundColor: "#D8F29D" }}
+                      className={`px-5 py-2 font-medium outline-none rounded-3xl shadow-lg ${
+                        paperCode === "cc4" ? "bg-black text-white" : "bggreen"
+                      }`}
                       onClick={() => {
                         SetPaperCode("cc4");
                       }}
@@ -233,8 +235,11 @@ function SemTwo() {
                       CC-4
                     </button>
                     <button
-                      className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
-                      style={{ backgroundColor: "#D8F29D" }}
+                      className={`px-5 py-2 font-medium outline-none rounded-3xl shadow-lg ${
+                        paperCode === "aecc2"
+                          ? "bg-black text-white"
+                          : "bggreen"
+                      }`}
                       onClick={() => {
                         SetPaperCode("aecc2");
                       }}
@@ -242,8 +247,9 @@ function SemTwo() {
                       AECC-2
                     </button>
                     <button
-                      className="px-5 py-2 font-medium outline-none rounded-3xl shadow-lg"
-                      style={{ backgroundColor: "#D8F29D" }}
+                      className={`px-5 py-2 font-medium outline-none rounded-3xl shadow-lg ${
+                        paperCode === "ge2" ? "bg-black text-white" : "bggreen"
+                      }`}
                       onClick={() => {
                         SetPaperCode("ge2");
                       }}
@@ -253,6 +259,7 @@ function SemTwo() {
                   </div>
                 </div>
               </div>
+
               <div className="viewer">
                 <h1 className="text-center text-md font-bold">
                   CURRENT PYQ IS {paperCode.toUpperCase()} {year}
@@ -277,7 +284,7 @@ function SemTwo() {
       ) : (
         <div className="flex w-4/5 justify-center gap-2 m-auto mt-2 resource-mobile ">
           <div className="w-1/2">
-            <CampusConnect />
+            <CheatSheet />
           </div>
           <div className="w-1/2">
             <AiSearchBar />
