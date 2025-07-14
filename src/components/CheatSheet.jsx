@@ -3,7 +3,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 
-export default function CheatSheet() {
+export default function CheatSheet({books}) {
+   
+    
+  
+    
+
+    
   const cookies = useCookies();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -22,28 +28,28 @@ export default function CheatSheet() {
     verifyCookie();
   }, [cookies]);
 
-  const books = [
-    {
-      title: "CC-3: Java",
-      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751502947/PrevYea_CC3_Micro_gp1rki.pdf",
-      uploadtime: " 06:05 AM 3-July",
-    },
-    {
-      title: "CC-4: Arch. ",
-      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751658638/PrevYea_CC4_Micro_loyzok.pdf",
-      uploadtime: " 01:20 AM 5-July",
-    },
-    {
-      title: "GE-2: Maths",
-      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751926571/PrevYea_GE2_Micro_rnytsi.pdf",
-      uploadtime: " 03:46 AM 8-July",
-    },
-    {
-      title: "AECC-2: EVS",
-      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1752060394/PrevYea_AECC2_Micro_fde1xp.pdf",
-      uploadtime: " 9-July 04:56 PM",
-    },
-  ];
+//   const books = [
+//     {
+//       title: "CC-3: Java",
+//       pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751502947/PrevYea_CC3_Micro_gp1rki.pdf",
+//       uploadtime: " 06:05 AM 3-July",
+//     },
+//     {
+//       title: "CC-4: Arch. ",
+//       pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751658638/PrevYea_CC4_Micro_loyzok.pdf",
+//       uploadtime: " 01:20 AM 5-July",
+//     },
+//     {
+//       title: "GE-2: Maths",
+//       pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1751926571/PrevYea_GE2_Micro_rnytsi.pdf",
+//       uploadtime: " 03:46 AM 8-July",
+//     },
+//     {
+//       title: "AECC-2: EVS",
+//       pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1752060394/PrevYea_AECC2_Micro_fde1xp.pdf",
+//       uploadtime: " 9-July 04:56 PM",
+//     },
+//   ];
 
   return (
     <div className="my-8 rounded-2xl outline-1 shadow-lg" style={{backgroundColor:"white", padding: "2rem" }}>

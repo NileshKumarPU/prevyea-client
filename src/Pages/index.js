@@ -11,6 +11,8 @@ import MovingText from "../components/MovingText";
 import About from "./About";
 import CampusConnect from "./CampusConnect";
 import Profile from "../components/Profile";
+import SemFive from "./SemFive";
+import SemThree from "./SemThree";
 
 
-export {BCA,SemOne,SemTwo,SemFour,Admin,ComingSoon,MovingText,Login,Dashboard,Signup,About,CampusConnect,Profile}
+export {SemThree,SemFive,BCA,SemOne,SemTwo,SemFour,Admin,ComingSoon,MovingText,Login,Dashboard,Signup,About,CampusConnect,Profile}
