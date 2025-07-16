@@ -346,7 +346,10 @@ function SemThree() {
             <div className="w-1/2">
               <AiSearchBar />
 
-          <div className=" mt-4 py-8 rounded-lg shadow-2xl bg-amber-50 m-auto text-center">
+            </div>
+
+          </div>
+          <div className=" mt-4 py-8 bg-amber-50 m-auto text-center">
             <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
               <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
                 Syllabus
@@ -364,9 +367,8 @@ function SemThree() {
               </Link>                        
             </div>
           </div>
-            </div>
-          </div>
           {/* this is second div for syllabus */}
+
             {/* this is third div notes here */}
           <div className="py-12 bg-emerald-100 m-auto text-center">
             <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
