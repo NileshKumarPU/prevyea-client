@@ -135,6 +135,11 @@ function SemThree() {
       pdf: "#",
       uploadtime: " soon",
     },
+    {
+      title: "SEC-1: E.V.L",
+      pdf: "#",
+      uploadtime: " soon",
+    },
   ];
 
   useEffect(() => {
@@ -340,10 +345,8 @@ function SemThree() {
             </div>
             <div className="w-1/2">
               <AiSearchBar />
-            </div>
-          </div>
-          {/* this is second div for syllabus */}
-          <div className="py-12 bg-amber-50 m-auto text-center">
+
+          <div className=" mt-4 py-8 rounded-lg shadow-2xl bg-amber-50 m-auto text-center">
             <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
               <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
                 Syllabus
@@ -353,35 +356,17 @@ function SemThree() {
             <div className="pb-6 p-4 font-extrabold  text-md md:text-xl lg:text-2xl space-x-3">
               
               <Link
-                to="#"
+                to="https://res.cloudinary.com/dwpc2rgdn/image/upload/v1752696834/Sem_3_Syllabus_oa8plg.pdf"
                 className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
               >
                 <BookOpen className="w-5 h-5 inline" />
-                <span> CC-5</span>
-              </Link>
-              <Link
-                to="#"
-                className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
-              >
-                <BookOpen className="w-5 h-5 inline" />
-                <span> CC-6</span>
-              </Link>
-              <Link
-                to="#"
-                className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
-              >
-                <BookOpen className="w-5 h-5 inline" />
-                <span> CC-7</span>
-              </Link>
-              <Link
-                to="#"
-                className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
-              >
-                <BookOpen className="w-5 h-5 inline" />
-                <span> GE-3</span>
-              </Link>
+                <span> View/Download</span>
+              </Link>                        
             </div>
           </div>
+            </div>
+          </div>
+          {/* this is second div for syllabus */}
             {/* this is third div notes here */}
           <div className="py-12 bg-emerald-100 m-auto text-center">
             <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
