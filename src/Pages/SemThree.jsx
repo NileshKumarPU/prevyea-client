@@ -6,91 +6,111 @@ import { Link } from "react-router-dom";
 import { BookOpen } from "lucide-react";
 
 function SemThree() {
-  const [year, setYear] = useState(2020);
-  const [paperCode, SetPaperCode] = useState("cc3");
-  const [pdfUrl, setPdfUrl] = useState("/cc3/2020.pdf");
+  const [year, setYear] = useState(2021);
+  const [paperCode, SetPaperCode] = useState("cc5");
+  const [pdfUrl, setPdfUrl] = useState("/cc5/2021.pdf");
   const [activeTab, setActiveTab] = useState(true);
 
   const pdfs = [
     {
-      title: "ge22021",
-      url: "/sem2/ge2/2021.pdf",
+      title: "ge32021",
+      url: "/sem3/ge3/2021.pdf",
+    },
+    // {
+    //   title: "ge32020",
+    //   url: "/sem3/ge3/2020.pdf",
+    // },
+    {
+      title: "cc52021",
+      url: "/sem3/cc5/2021.pdf",
+    },
+    // {
+    //   title: "cc52020",
+    //   url: "/sem3/cc5/2020.pdf",
+    // },
+    {
+      title: "ge32024",
+      url: "/sem3/ge3/2024.pdf",
     },
     {
-      title: "ge22020",
-      url: "/sem2/ge2/2020.pdf",
+      title: "ge32023",
+      url: "/sem3/ge3/2023.pdf",
     },
     {
-      title: "cc32021",
-      url: "/sem2/cc3/2021.pdf",
+      title: "ge32022",
+      url: "/sem3/ge3/2022.pdf",
     },
     {
-      title: "cc32020",
-      url: "/sem2/cc3/2020.pdf",
+      title: "sec12021",
+      url: "/sem3/sec1/2021.pdf",
+    },
+    // {
+    //   title: "sec12020",
+    //   url: "/sem3/sec1/2020.pdf",
+    // },
+    {
+      title: "cc52023",
+      url: "/sem3/cc5/2023.pdf",
     },
     {
-      title: "ge22024",
-      url: "/sem2/ge2/2024.pdf",
+      title: "cc62024",
+      url: "/sem3/cc6/2024.pdf",
     },
     {
-      title: "ge22023",
-      url: "/sem2/ge2/2023.pdf",
+      title: "cc62023",
+      url: "/sem3/cc6/2023.pdf",
     },
     {
-      title: "ge22022",
-      url: "/sem2/ge2/2022.pdf",
+      title: "cc62022",
+      url: "/sem3/cc6/2022.pdf",
     },
     {
-      title: "aecc22021",
-      url: "/sem2/aecc/2021.pdf",
+      title: "cc52024",
+      url: "/sem3/cc5/2024.pdf",
     },
     {
-      title: "aecc22020",
-      url: "/sem2/aecc/2020.pdf",
+      title: "cc52022",
+      url: "/sem3/cc5/2022.pdf",
     },
     {
-      title: "cc32023",
-      url: "/sem2/cc3/2023.pdf",
+      title: "cc62021",
+      url: "/sem3/cc6/2021.pdf",
+    },
+    // {
+    //   title: "cc62020",
+    //   url: "/sem3/cc6/2020.pdf",
+    // },
+    // {
+    //   title: "cc72020",
+    //   url: "/sem3/cc7/2020.pdf",
+    // },
+    {
+      title: "cc72021",
+      url: "/sem3/cc7/2021.pdf",
     },
     {
-      title: "cc42024",
-      url: "/sem2/cc4/2024.pdf",
+      title: "cc72022",
+      url: "/sem3/cc7/2022.pdf",
     },
     {
-      title: "cc42023",
-      url: "/sem2/cc4/2023.pdf",
+      title: "cc72023",
+      url: "/sem3/cc7/2023.pdf",
     },
     {
-      title: "cc42022",
-      url: "/sem2/cc4/2022.pdf",
+      title: "cc72024",
+      url: "/sem3/cc7/2024.pdf",
     },
     {
-      title: "cc32024",
-      url: "/sem2/cc3/2024.pdf",
+      title: "sec12024",
+      url: "/sem3/sec1/2024.pdf",
     },
     {
-      title: "cc32022",
-      url: "/sem2/cc3/2022.pdf",
+      title: "sec12023",
+      url: "/sem3/sec1/2023.pdf",
     },
     {
-      title: "cc42021",
-      url: "/sem2/cc4/2021.pdf",
-    },
-    {
-      title: "cc42020",
-      url: "/sem2/cc4/2020.pdf",
-    },
-    {
-      title: "aecc22024",
-      url: "/sem2/aecc/2024.pdf",
-    },
-    {
-      title: "aecc22023",
-      url: "/sem2/aecc/2023.pdf",
-    },
-    {
-      title: "aecc22022",
-      url: "/sem2/aecc/2022.pdf",
+      title: "sec12022",
+      url: "/sem3/sec1/2022.pdf",
     },
   ];
 
@@ -160,22 +180,23 @@ function SemThree() {
       </div>
       {activeTab ? (
         <div>
-          <MovingText text="All PYQs From 2020-2024 Are Now Available With AI answers generation feature." />
+          <MovingText text="All PYQs From 2021-2024 Are Now Available With AI answers generation feature." />
           <div className="flex justify-center  sempage-mobile pb-6 w-4/5 m-auto">
             <div className="w-full h-fit pt-36 mt-6 year-box-mobile">
               <p className="text-center font-bold">Select Year</p>
               <div className="flex justify-center ">
                 <div className=" bg-white py-4 px-3 rounded-3xl shadow-lg flex flex-col justify-center gap-5 border-2 year-list-mobile">
-                  <button
+                  {/* <button
                     className={`px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg ${
                       year === 2020 ? "bg-black" : "bgblue"
                     }`}
                     onClick={() => {
                       setYear(2020);
                     }}
+                    
                   >
                     2020
-                  </button>
+                  </button> */}
                   <button
                     className={`px-5 py-2 text-white font-medium outline-none rounded-3xl shadow-lg ${
                       year === 2021 ? "bg-black" : "bgblue"
@@ -233,7 +254,7 @@ function SemThree() {
               <div className="paperCode">
                 <p className="text-center font-bold">Select Paper Code</p>
                 <div className=" flex justify-center ">
-                  <div className=" bg-white py-2 px-3 rounded-3xl shadow-lg flex justify-center gap-5 border-2">
+                  <div className=" bg-white py-2 px-3 rounded-3xl shadow-lg flex justify-center gap-3 border-2">
                     <button
                       className={`px-5 py-2 font-medium outline-none rounded-3xl shadow-lg ${
                         paperCode === "cc5" ? "bg-black text-white" : "bggreen"
