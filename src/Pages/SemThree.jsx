@@ -331,7 +331,7 @@ function SemThree() {
               </div>
             </div>
           </div>
-          <div className="bg-emerald-100 w-full py-4 md:h-screen">
+          <div className="bg-emerald-100 w-full py-4 ">
             <AiSearchBar text="🔥AI-Powered Answers" />
           </div>
         </div>
@@ -383,7 +383,7 @@ function SemThree() {
                 className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
               >
                 <BookOpen className="w-5 h-5 inline" />
-                <span> CC-5</span>
+                <span> Not Available</span>
               </Link>
             </div>
           </div>

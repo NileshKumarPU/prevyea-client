@@ -51,7 +51,7 @@ export default function AiSearchBar() {
   };
   return (
     <motion.div
-      className="max-w-4xl mx-auto mt-10 p-6 bg-gradient-to-br from-white via-indigo-50 to-indigo-100 rounded-2xl shadow-xl"
+      className="max-w-4xl mx-auto my-10 p-6 bg-gradient-to-br from-white via-indigo-50 to-indigo-100 rounded-2xl shadow-xl"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}

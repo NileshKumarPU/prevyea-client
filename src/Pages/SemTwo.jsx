@@ -301,7 +301,7 @@ function SemTwo() {
               </div>
             </div>
           </div>
-          <div className="bg-emerald-100 w-full py-4 md:h-screen">
+          <div className="bg-emerald-100 w-full py-4 ">
             <AiSearchBar text="🔥AI-Powered Answers" />
           </div>
         </div>
