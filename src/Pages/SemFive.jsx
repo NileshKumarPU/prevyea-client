@@ -7,90 +7,90 @@ import { BookOpen } from "lucide-react";
 
 function SemFive() {
   const [year, setYear] = useState(2020);
-  const [paperCode, SetPaperCode] = useState("cc3");
-  const [pdfUrl, setPdfUrl] = useState("/cc3/2020.pdf");
+  const [paperCode, SetPaperCode] = useState("cc11");
+  const [pdfUrl, setPdfUrl] = useState("/sem5/cc11/2020.pdf");
   const [activeTab, setActiveTab] = useState(true);
 
   const pdfs = [
     {
-      title: "ge22021",
-      url: "/sem2/ge2/2021.pdf",
+      title: "dse12021",
+      url: "/sem5/dse1/2021.pdf",
     },
     {
-      title: "ge22020",
-      url: "/sem2/ge2/2020.pdf",
+      title: "dse12020",
+      url: "/sem5/dse1/2020.pdf",
     },
     {
-      title: "cc32021",
-      url: "/sem2/cc3/2021.pdf",
+      title: "cc112021",
+      url: "/sem5/cc11/2021.pdf",
     },
     {
-      title: "cc32020",
-      url: "/sem2/cc3/2020.pdf",
+      title: "cc112020",
+      url: "/sem5/cc11/2020.pdf",
     },
     {
-      title: "ge22024",
-      url: "/sem2/ge2/2024.pdf",
+      title: "dse12024",
+      url: "/sem5/dse1/2024.pdf",
     },
     {
-      title: "ge22023",
-      url: "/sem2/ge2/2023.pdf",
+      title: "dse12023",
+      url: "/sem5/dse1/2023.pdf",
     },
     {
-      title: "ge22022",
-      url: "/sem2/ge2/2022.pdf",
+      title: "dse12022",
+      url: "/sem5/dse1/2022.pdf",
     },
     {
-      title: "aecc22021",
-      url: "/sem2/aecc/2021.pdf",
+      title: "dse22021",
+      url: "/sem5/dse2/2021.pdf",
     },
     {
-      title: "aecc22020",
-      url: "/sem2/aecc/2020.pdf",
+      title: "dse22020",
+      url: "/sem5/dse2/2020.pdf",
     },
     {
-      title: "cc32023",
-      url: "/sem2/cc3/2023.pdf",
+      title: "cc112023",
+      url: "/sem5/cc11/2023.pdf",
     },
     {
-      title: "cc42024",
-      url: "/sem2/cc4/2024.pdf",
+      title: "cc122024",
+      url: "/sem5/cc12/2024.pdf",
     },
     {
-      title: "cc42023",
-      url: "/sem2/cc4/2023.pdf",
+      title: "cc122023",
+      url: "/sem5/cc12/2023.pdf",
     },
     {
-      title: "cc42022",
-      url: "/sem2/cc4/2022.pdf",
+      title: "cc122022",
+      url: "/sem5/cc12/2022.pdf",
     },
     {
-      title: "cc32024",
-      url: "/sem2/cc3/2024.pdf",
+      title: "cc112024",
+      url: "/sem5/cc11/2024.pdf",
     },
     {
-      title: "cc32022",
-      url: "/sem2/cc3/2022.pdf",
+      title: "cc112022",
+      url: "/sem5/cc11/2022.pdf",
     },
     {
-      title: "cc42021",
-      url: "/sem2/cc4/2021.pdf",
+      title: "cc122021",
+      url: "/sem5/cc12/2021.pdf",
     },
     {
-      title: "cc42020",
-      url: "/sem2/cc4/2020.pdf",
+      title: "cc122020",
+      url: "/sem5/cc12/2020.pdf",
     },
     {
-      title: "aecc22024",
-      url: "/sem2/aecc/2024.pdf",
+      title: "dse22024",
+      url: "/sem5/dse2/2024.pdf",
     },
     {
-      title: "aecc22023",
-      url: "/sem2/aecc/2023.pdf",
+      title: "dse22023",
+      url: "/sem5/dse2/2023.pdf",
     },
     {
-      title: "aecc22022",
-      url: "/sem2/aecc/2022.pdf",
+      title: "dse22022",
+      url: "/sem5/dse2/2022.pdf",
     },
   ];
 
@@ -160,7 +160,7 @@ function SemFive() {
       </div>
       {activeTab ? (
         <div>
-          <MovingText text="All PYQs From 2020-2024 Are Now Available With AI answers generation feature." />
+          {/* <MovingText text="All PYQs From 2020-2024 Are Now Available With AI answers generation feature." /> */}
           <div className="flex justify-center  sempage-mobile pb-6 w-4/5 m-auto">
             <div className="w-full h-fit pt-36 mt-6 year-box-mobile">
               <p className="text-center font-bold">Select Year</p>
@@ -321,33 +321,15 @@ function SemFive() {
             </h1>
             <div className="pb-6 p-4 font-extrabold  text-md md:text-xl lg:text-2xl space-x-3">
               
+             
+             
+              
               <Link
-                to="#"
+                to="https://res.cloudinary.com/dwpc2rgdn/image/upload/v1754411473/SEM5_Syllabus_tredfy.pdf"
                 className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
               >
                 <BookOpen className="w-5 h-5 inline" />
-                <span> CC-11</span>
-              </Link>
-              <Link
-                to="#"
-                className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
-              >
-                <BookOpen className="w-5 h-5 inline" />
-                <span> CC-12</span>
-              </Link>
-              <Link
-                to="#"
-                className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
-              >
-                <BookOpen className="w-5 h-5 inline" />
-                <span> DSE-1</span>
-              </Link>
-              <Link
-                to="#"
-                className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
-              >
-                <BookOpen className="w-5 h-5 inline" />
-                <span> DSE-2</span>
+                <span> Download Now</span>
               </Link>
             </div>
           </div>
@@ -364,7 +346,7 @@ function SemFive() {
                 className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
               >
                 <BookOpen className="w-5 h-5 inline" />
-                <span> DSE-2</span>
+                <span> Coming Soon..</span>
               </Link>
             </div>
           </div>
