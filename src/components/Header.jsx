@@ -111,7 +111,7 @@ function Header() {
 
           <div
             id="nav-links"
-            className="w-3/5 flex justify-around align-middle "
+            className="w-3/5 flex justify-around align-middle font-medium  "
             onClick={showLinks}
           >
             <Link to="" className="px-4 ">
