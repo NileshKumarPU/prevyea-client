@@ -12,6 +12,9 @@ function SemOne() {
   const [pdfUrl, setPdfUrl] = useState("/cc1/2020.pdf");
   const [activeTab, setActiveTab] = useState(true);
 
+  
+  document.title="BCA Sem-I | Prevyea "
+
   const pdfs = [
     {
       title: "ge12021",

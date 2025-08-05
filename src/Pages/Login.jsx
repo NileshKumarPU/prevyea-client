@@ -13,6 +13,8 @@ export default function Login() {
   const [pass, setPass] = useState("");
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  
+  document.title="Log In | Prevyea "
 
   const login = async (e) => {
     e.preventDefault();

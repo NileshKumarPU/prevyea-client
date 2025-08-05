@@ -8,6 +8,8 @@ import About from "../Pages/About"
 import { ToastContainer } from "react-toastify";
 
 function Home() {
+  
+  document.title="Home | Prevyea "
 
 
   

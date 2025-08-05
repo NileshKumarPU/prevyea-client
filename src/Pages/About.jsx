@@ -1,6 +1,9 @@
 import React from "react";
 
 const About = () => {
+
+  
+  document.title="About | Prevyea "
   return (
     <div className="bg-emerald-100" style={{ padding: "2rem",  minHeight: "100vh" }}>
       <div style={{ maxWidth: "800px", margin: "0 auto", background: "#fff", padding: "2rem", borderRadius: "10px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}>

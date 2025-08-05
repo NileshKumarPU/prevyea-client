@@ -3,6 +3,9 @@ import { Link } from "react-router"
 import RectangleCard from "../components/RectangleCard"
 
 function BCA(){
+
+  
+  document.title="BCA | Prevyea "
     return(
 
         <>

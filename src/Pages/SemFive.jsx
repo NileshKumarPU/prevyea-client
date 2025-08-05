@@ -11,6 +11,8 @@ function SemFive() {
   const [pdfUrl, setPdfUrl] = useState("/sem5/cc11/2020.pdf");
   const [activeTab, setActiveTab] = useState(true);
 
+  document.title="BCA Sem-V | Prevyea ";
+
   const pdfs = [
     {
       title: "dse12021",

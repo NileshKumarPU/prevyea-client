@@ -3,6 +3,8 @@ import { useState } from "react";
 import Profile from "../components/Profile";
 
 export default function Dashboard() {
+  
+  document.title="Dashboard | Prevyea "
   const { username, email, fullname, loading } = useVerifyCookie();
   const [activeTab, setActiveTab] = useState("profile");
   const renderContent = () => {
