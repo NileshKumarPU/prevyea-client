@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 
 const TodoList = () => {
+    document.title="To Do List | Prevyea"
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState("");
 
