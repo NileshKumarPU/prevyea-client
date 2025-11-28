@@ -301,6 +301,7 @@ function SemFive() {
           <div className="bg-emerald-100 w-full py-4 md:h-screen">
             <AiSearchBar text="🔥AI-Powered Answers" />
           </div>
+          <p className="bg-emerald-100 font-light ">Last Updated: 29-11-25</p>
         </div>
       ) : (
         // This is resource tab.
