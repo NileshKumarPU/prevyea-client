@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import { BookOpen } from "lucide-react";
 
 function SemFive() {
-  const [year, setYear] = useState(2020);
+  const [year, setYear] = useState(2021);
   const [paperCode, SetPaperCode] = useState("cc11");
-  const [pdfUrl, setPdfUrl] = useState("/sem5/cc11/2020.pdf");
+  const [pdfUrl, setPdfUrl] = useState("/sem5/cc11/2021.pdf");
   const [activeTab, setActiveTab] = useState(true);
 
   document.title = "BCA Sem-V | Prevyea ";
