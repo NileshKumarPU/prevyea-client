@@ -11,7 +11,7 @@ function SemFive() {
   const [pdfUrl, setPdfUrl] = useState("/sem5/cc11/2020.pdf");
   const [activeTab, setActiveTab] = useState(true);
 
-  document.title="BCA Sem-V | Prevyea ";
+  document.title = "BCA Sem-V | Prevyea ";
 
   const pdfs = [
     {
@@ -138,6 +138,7 @@ function SemFive() {
 
   return (
     <>
+      <MovingText text="All PYQs From 2021-2024 Are Now Available." />
       <div className="flex justify-center w-1/2 m-auto mt-0.5 font-light text-xl shadow-lg tab-mobile">
         <button
           className={`border-amber-200 p-2 w-full shadow-lg ${
@@ -304,7 +305,7 @@ function SemFive() {
       ) : (
         // This is resource tab.
         <div>
-            {/* This is first and  outer div for cheatsheet and ai answer */}
+          {/* This is first and  outer div for cheatsheet and ai answer */}
           <div className="flex w-4/5 justify-center gap-2 m-auto mt-2 resource-mobile ">
             <div className="w-1/2">
               <CheatSheet books={books} />
@@ -322,10 +323,6 @@ function SemFive() {
               Here
             </h1>
             <div className="pb-6 p-4 font-extrabold  text-md md:text-xl lg:text-2xl space-x-3">
-              
-             
-             
-              
               <Link
                 to="https://res.cloudinary.com/dwpc2rgdn/image/upload/v1754411473/SEM5_Syllabus_tredfy.pdf"
                 className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
@@ -343,7 +340,7 @@ function SemFive() {
               Here
             </h1>
             <div>
-                 <Link
+              <Link
                 to="#"
                 className="inline-block items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-lime-300 via-cyan-400 to-teal-400 text-black font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
               >
@@ -352,7 +349,7 @@ function SemFive() {
               </Link>
             </div>
           </div>
-            {/* this is third and Something here div */}
+          {/* this is third and Something here div */}
           <div className="py-12 bg-amber-50 m-auto text-center">
             <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
               <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
@@ -360,7 +357,6 @@ function SemFive() {
               </span>{" "}
               Here
             </h1>
-           
           </div>
         </div>
       )}
