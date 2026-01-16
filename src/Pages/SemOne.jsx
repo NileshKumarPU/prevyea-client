@@ -33,7 +33,7 @@ function SemOne() {
       url: "/sem1/cc1/2020.pdf",
     },
     {
-      // title: "ge12024",
+      title: "ge12024",
       url: "/sem1/ge1/2024.pdf",
     },
     {
@@ -111,8 +111,8 @@ function SemOne() {
     },
     {
       title: "GE-1: Maths-I",
-      pdf: "#",
-      uploadtime: " soon",
+      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1768599798/PrevYea_GE1_2025_ibmer2.pdf",
+      uploadtime: " 03:20 AM 17-Jan",
     },
     {
       title: "AECC-1: English",
