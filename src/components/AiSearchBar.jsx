@@ -16,15 +16,19 @@ export default function AiSearchBar() {
 
     // Replace this with your actual Gemini API call
     
-   
-    const result = await axios({
-      method: "post",
-      url: "https://prevyea-server.vercel.app/aisearch",
-      data: {
-        searchquery: query,
-      },
-    });
-  
+   try {
+    
+     const result = await axios({
+       method: "post",
+       url: "https://prevyea-server.vercel.app/aisearch",
+       data: {
+         searchquery: query,
+        },
+      });
+      
+    } catch (error) {
+        alert(error);
+    }
     const fakeResponse =result.data.contents;
     // "loflal;msd;fmaaldmflkankgbaifhgnlachlkr gwekgh liweclnghbksdjb ssjdhbvsdvbndbvliadhfguehvhadfkghkj;ahgo[qehrg;h qeirfh"
 
