@@ -26,17 +26,18 @@ export default function AiSearchBar() {
         },
       });
       
+      const fakeResponse =result.data.contents;
+      // "loflal;msd;fmaaldmflkankgbaifhgnlachlkr gwekgh liweclnghbksdjb ssjdhbvsdvbndbvliadhfguehvhadfkghkj;ahgo[qehrg;h qeirfh"
+      
+      setTimeout(() => {
+        setHistory([...history, { q: query, a: fakeResponse }]);
+        setQuery("");
+        setLoading(false);
+      }, 1200);
+      
     } catch (error) {
         alert(error);
     }
-    const fakeResponse =result.data.contents;
-    // "loflal;msd;fmaaldmflkankgbaifhgnlachlkr gwekgh liweclnghbksdjb ssjdhbvsdvbndbvliadhfguehvhadfkghkj;ahgo[qehrg;h qeirfh"
-
-    setTimeout(() => {
-      setHistory([...history, { q: query, a: fakeResponse }]);
-      setQuery("");
-      setLoading(false);
-    }, 1200);
   };
   const copyToClipboard = async (text, index) => {
     try {
