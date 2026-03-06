@@ -15,6 +15,8 @@ export default function AiSearchBar() {
     setLoading(true);
 
     // Replace this with your actual Gemini API call
+    
+   
     const result = await axios({
       method: "post",
       url: "https://prevyea-server.vercel.app/aisearch",
