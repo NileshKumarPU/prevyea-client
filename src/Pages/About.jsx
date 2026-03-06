@@ -4,7 +4,7 @@ const About = () => {
 
   
   document.title="About | Prevyea "
-  return (
+  return ( <>
     <div className="bg-emerald-100" style={{ padding: "2rem",  minHeight: "100vh" }}>
       <div style={{ maxWidth: "800px", margin: "0 auto", background: "#fff", padding: "2rem", borderRadius: "10px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}>
         <h1 style={{ color: "#2CB8C6", fontSize: "2.5rem", marginBottom: "0.5rem" }}>About PrevYea</h1>
@@ -28,8 +28,32 @@ const About = () => {
           Whether you’re stuck on a topic, revising last minute, or planning ahead — Prevyea is your trusted companion.
         </p>
       </div>
+
+        
+      </div>
+      <div className="py-12 bg-amber-50 m-auto text-center">
+      
+      <div style={{ maxWidth: "800px", margin: "0 auto", background: "#fff", padding: "2rem", borderRadius: "10px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}>
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>Changelogs</h1>
+        
+
+      
+
+        <ul style={{ paddingLeft: "1.2rem", marginBottom: "1.5rem", lineHeight: "1.6", textAlign:"left", }}>
+          <li><strong className="font-mono">• 07/03/2026:</strong> Gemini AI answer fixes, Added Last Upated Timing in header.</li>
+          <li><strong className="font-mono">• 29/12/2025:</strong> Added new PYQs for Sem V</li>
+          
+        </ul>
+
+    
+
+        <p style={{ fontSize: "1.1rem", fontStyle: "italic", color: "#555" }}>
+          Feel free to email me your suggestions.
+        </p>
+      </div>
+
     </div>
-  );
+ /</> );
 };
 
 export default About;
