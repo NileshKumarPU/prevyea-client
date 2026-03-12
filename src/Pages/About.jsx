@@ -40,6 +40,7 @@ const About = () => {
       
 
         <ul style={{ paddingLeft: "1.2rem", marginBottom: "1.5rem", lineHeight: "1.6", textAlign:"left", }}>
+          <li><strong className="font-mono">• 13/03/2026:</strong> Added CC-11 CheatSheet for Sem V</li>
           <li><strong className="font-mono">• 07/03/2026:</strong> Gemini AI answer fixes, Added Last Upated Timing in header.</li>
           <li><strong className="font-mono">• 29/12/2025:</strong> Added new PYQs for Sem V</li>
           

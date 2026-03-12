@@ -95,12 +95,12 @@ function SemFive() {
       url: "/sem5/dse2/2022.pdf",
     },
   ];
-
+//CheatSheet Section
   const books = [
     {
       title: "CC-11: Data Str.",
-      pdf: "#",
-      uploadtime: " Soon",
+      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1773343678/PrevYea_CC11_2026_ke7f7p.pdf",
+      uploadtime: "01:00 AM 13-Mar",
     },
     {
       title: "CC-12: Big Data ",
