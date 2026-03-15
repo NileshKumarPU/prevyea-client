@@ -104,8 +104,8 @@ function SemFive() {
     },
     {
       title: "CC-12: Big Data ",
-      pdf: "#",
-      uploadtime: " soon",
+      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1773600867/PrevYea_CC12_2026_kimb1s.pdf",
+      uploadtime: "01:05 AM 16-Mar",
     },
     {
       title: "DSE-1: Op. Res.",
