@@ -124,8 +124,8 @@ function SemThree() {
     },
     {
       title: "CC-6: O.S.  ",
-      pdf: "#",
-      uploadtime: " soon",
+      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1773696015/PrevYea_CC6_2026_qiycog.pdf",
+      uploadtime: "02:55 AM 17 Mar",
     },
     {
       title: "CC-7: SSAD",
