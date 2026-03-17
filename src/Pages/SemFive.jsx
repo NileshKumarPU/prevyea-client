@@ -109,8 +109,8 @@ function SemFive() {
     },
     {
       title: "DSE-1: Op. Res.",
-      pdf: "#",
-      uploadtime: " soon",
+      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1773779907/PrevYea_DSE1_2026_pzby0f.pdf",
+      uploadtime: "02:11 AM 18-Mar",
     },
     {
       title: "DSE-2: Info. Sec.",
