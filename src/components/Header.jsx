@@ -104,7 +104,7 @@ function Header() {
                 <img className="rounded-3xl" src={logo} width={150} />
               </Link>
             </div>
-            <div><p className="font-mono text-sm">Last Updated: 02:11 AM 18/03/2026</p></div>
+            <div><p className="font-mono text-sm">Last Updated: 22:47 PM 23/03/2026</p></div>
             <div className="hidden menu align-middle" onClick={showLinks}>
               <Menu size={36} />
             </div>

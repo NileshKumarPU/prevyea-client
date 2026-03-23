@@ -114,8 +114,8 @@ function SemFive() {
     },
     {
       title: "DSE-2: Info. Sec.",
-      pdf: "#",
-      uploadtime: " soon",
+      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1774286037/PrevYea_DSE2_2026_e2zslq.pdf",
+      uploadtime: "22:47 PM 23-Mar",
     },
   ];
 
