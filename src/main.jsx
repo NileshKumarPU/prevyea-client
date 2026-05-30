@@ -4,9 +4,10 @@ import "./index.css";
 import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import Layout from "../Layout.jsx";
-import { ToDoList,BCA, SemOne,SemTwo,SemFour,Admin,ComingSoon,Login,Dashboard,Signup, About, CampusConnect, SemFive, SemThree,} from "./Pages";
+import { ToDoList,BCA, SemOne,SemTwo, SemSix,SemFour,Admin,ComingSoon,Login,Dashboard,Signup, About, CampusConnect, SemFive, SemThree,} from "./Pages";
 import { CookiesProvider } from "react-cookie";
 import ForgotPass from "./components/ForgotPass.jsx";
+
 
 
 
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path: "bca/SemSix",
-        element: <ComingSoon/>,
+        element: <SemSix/>,
         
       },
       {

@@ -14,6 +14,7 @@ import Profile from "../components/Profile";
 import SemFive from "./SemFive";
 import SemThree from "./SemThree";
 import ToDoList from "./ToDoList";
+import SemSix from "./SemSix";
 
 
-export {ToDoList,SemThree,SemFive,BCA,SemOne,SemTwo,SemFour,Admin,ComingSoon,MovingText,Login,Dashboard,Signup,About,CampusConnect,Profile}
+export {ToDoList, SemSix, SemThree,SemFive,BCA,SemOne,SemTwo,SemFour,Admin,ComingSoon,MovingText,Login,Dashboard,Signup,About,CampusConnect,Profile}
