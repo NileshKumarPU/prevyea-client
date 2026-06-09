@@ -7,40 +7,40 @@ import { BookOpen } from "lucide-react";
 
 function SemSix() {
   const [year, setYear] = useState(2021);
-  const [paperCode, SetPaperCode] = useState("cc11");
-  const [pdfUrl, setPdfUrl] = useState("/sem5/cc11/2021.pdf");
+  const [paperCode, SetPaperCode] = useState("cc13");
+  const [pdfUrl, setPdfUrl] = useState("/sem5/cc13/2021.pdf");
   const [activeTab, setActiveTab] = useState(true);
 
-  document.title = "BCA Sem-V | Prevyea ";
+  document.title = "BCA Sem-VI | Prevyea ";
 
   const pdfs = [
     {
-      title: "dse12021",
-      url: "/sem5/dse1/2021.pdf",
+      title: "dse32021",
+      url: "/sem5/dse3/2021.pdf",
     },
     {
-      title: "dse12020",
-      url: "/sem5/dse1/2020.pdf",
+      title: "dse32020",
+      url: "/sem5/dse3/2020.pdf",
     },
     {
-      title: "cc112021",
-      url: "/sem5/cc11/2021.pdf",
+      title: "cc132021",
+      url: "/sem5/cc13/2021.pdf",
     },
     {
-      title: "cc112020",
-      url: "/sem5/cc11/2020.pdf",
+      title: "cc132020",
+      url: "/sem5/cc13/2020.pdf",
     },
     {
-      title: "dse12024",
-      url: "/sem5/dse1/2024.pdf",
+      title: "dse32024",
+      url: "/sem5/dse3/2024.pdf",
     },
     {
-      title: "dse12023",
-      url: "/sem5/dse1/2023.pdf",
+      title: "dse32023",
+      url: "/sem5/dse3/2023.pdf",
     },
     {
-      title: "dse12022",
-      url: "/sem5/dse1/2022.pdf",
+      title: "dse32022",
+      url: "/sem5/dse3/2022.pdf",
     },
     {
       title: "dse22021",
@@ -51,65 +51,54 @@ function SemSix() {
       url: "/sem5/dse2/2020.pdf",
     },
     {
-      title: "cc112023",
-      url: "/sem5/cc11/2023.pdf",
+      title: "cc132023",
+      url: "/sem5/cc13/2023.pdf",
     },
     {
-      title: "cc122024",
-      url: "/sem5/cc12/2024.pdf",
+      title: "cc142024",
+      url: "/sem5/cc14/2024.pdf",
     },
     {
-      title: "cc122023",
-      url: "/sem5/cc12/2023.pdf",
+      title: "cc142023",
+      url: "/sem5/cc14/2023.pdf",
     },
     {
-      title: "cc122022",
-      url: "/sem5/cc12/2022.pdf",
+      title: "cc142022",
+      url: "/sem5/cc14/2022.pdf",
     },
     {
-      title: "cc112024",
-      url: "/sem5/cc11/2024.pdf",
+      title: "cc132024",
+      url: "/sem5/cc13/2024.pdf",
     },
     {
-      title: "cc112022",
-      url: "/sem5/cc11/2022.pdf",
+      title: "cc132022",
+      url: "/sem5/cc13/2022.pdf",
     },
     {
-      title: "cc122021",
-      url: "/sem5/cc12/2021.pdf",
+      title: "cc142021",
+      url: "/sem5/cc14/2021.pdf",
     },
     {
-      title: "cc122020",
-      url: "/sem5/cc12/2020.pdf",
+      title: "cc142020",
+      url: "/sem5/cc14/2020.pdf",
     },
-    {
-      title: "dse22024",
-      url: "/sem5/dse2/2024.pdf",
-    },
-    {
-      title: "dse22023",
-      url: "/sem5/dse2/2023.pdf",
-    },
-    {
-      title: "dse22022",
-      url: "/sem5/dse2/2022.pdf",
-    },
+    
   ];
 //CheatSheet Section
   const books = [
     {
-      title: "CC-11: Data Str.",
-      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1773343678/PrevYea_CC11_2026_ke7f7p.pdf",
+      title: "CC-13: Data Str.",
+      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1773343678/PrevYea_cc13_2026_ke7f7p.pdf",
       uploadtime: "01:00 AM 13-Mar",
     },
     {
-      title: "CC-12: Big Data ",
-      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1773600867/PrevYea_CC12_2026_kimb1s.pdf",
-      uploadtime: "01:05 AM 16-Mar",
+      title: "CC-14: Android. ",
+      pdf: "https://res.cloudinary.com/dwpc2rgdn/raw/upload/v1781016610/prevyea/PU/BCA/ALL/CC14/PrevYea_CC14_2026.pdf",
+      uploadtime: "08:25 PM 09-June",
     },
     {
       title: "DSE-1: Op. Res.",
-      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1773779907/PrevYea_DSE1_2026_pzby0f.pdf",
+      pdf: "https://res.cloudinary.com/dwpc2rgdn/image/upload/v1773779907/PrevYea_dse3_2026_pzby0f.pdf",
       uploadtime: "02:11 AM 18-Mar",
     },
     {
@@ -239,30 +228,30 @@ function SemSix() {
                   <div className=" bg-white py-2 px-3 rounded-3xl shadow-lg flex justify-center gap-5 border-2">
                     <button
                       className={`px-5 py-2 font-medium outline-none rounded-3xl shadow-lg ${
-                        paperCode === "cc11" ? "bg-black text-white" : "bggreen"
+                        paperCode === "cc13" ? "bg-black text-white" : "bggreen"
                       }`}
                       onClick={() => {
-                        SetPaperCode("cc11");
+                        SetPaperCode("cc13");
                       }}
                     >
                       CC-11
                     </button>
                     <button
                       className={`px-5 py-2 font-medium outline-none rounded-3xl shadow-lg ${
-                        paperCode === "cc12" ? "bg-black text-white" : "bggreen"
+                        paperCode === "cc14" ? "bg-black text-white" : "bggreen"
                       }`}
                       onClick={() => {
-                        SetPaperCode("cc12");
+                        SetPaperCode("cc14");
                       }}
                     >
                       CC-12
                     </button>
                     <button
                       className={`px-5 py-2 font-medium outline-none rounded-3xl shadow-lg ${
-                        paperCode === "dse1" ? "bg-black text-white" : "bggreen"
+                        paperCode === "dse3" ? "bg-black text-white" : "bggreen"
                       }`}
                       onClick={() => {
-                        SetPaperCode("dse1");
+                        SetPaperCode("dse3");
                       }}
                     >
                       DSE-1
